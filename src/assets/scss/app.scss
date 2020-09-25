@@ -1,2 +1,24 @@
 @import 'settings';
 @import 'foundation-emails';
+
+.content-wrapper {
+  .container {
+    outline: 1px dashed green;
+    background-color: $light-gray;
+  }
+
+  .columns {
+    padding-bottom: 0;
+  }
+}
+
+.alert {
+  &__text {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  &__link {
+    color: $tertiary-color;
+  }
+}
