@@ -1,14 +1,10 @@
 @import 'settings';
 @import 'foundation-emails';
+@import 'helpers';
 
-.adaptive-image {
-  width: 100%;
-  height: auto;
-}
-
+// outer wrapper
 .content-wrapper {
   .container {
-    outline: 1px dashed green;
     background: $light-gray;
   }
 
@@ -17,8 +13,19 @@
   }
 }
 
+// inner wrapper
+.inner {
+  background: $white;
+}
+
+// alert
 .alert {
   $alert: &;
+
+  .wrapper-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
   &__text,
   &__link {
@@ -40,6 +47,107 @@
     #{$alert}__text,
     #{$alert}__link {
       color: $dark-gray;
+    }
+  }
+}
+
+// intro
+.intro {
+  .wrapper-inner {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  &__logo {
+    width: 140px !important;
+    height: 24px !important;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 42px;
+    color: $primary-color;
+    font-weight: bold;
+
+    @media #{$media-query} {
+      font-size: 28px;
+      line-height: 33px;
+    }
+  }
+
+  &__lead {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    color: $secondary-color;
+    font-weight: bold;
+
+    @media #{$media-query} {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__grid {
+    center {
+      min-width: auto !important;
+    }
+  }
+}
+
+// date
+.date {
+  background: $secondary-color;
+  border-radius: $global-radius;
+
+  .container {
+    background: $quaternary-color;
+  }
+
+  .wrapper-inner {
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-bottom: 25px;
+    padding-right: 35px;
+  }
+
+  &__inner {
+    .wrapper-inner {
+      padding: 0;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__month,
+  &__day,
+  &__time {
+    font-weight: bold;
+    color: $white;
+  }
+
+  &__month,
+  &__time {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &__day {
+    font-size: 96px;
+    line-height: 111px;
+  }
+
+  &__button {
+    table {
+      td {
+        background: $quaternary-color !important;
+        border-radius: $global-radius;
+      }
+      a {
+        border-color: $quaternary-color;
+      }
     }
   }
 }
