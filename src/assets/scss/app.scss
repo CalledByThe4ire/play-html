@@ -1,10 +1,15 @@
 @import 'settings';
 @import 'foundation-emails';
 
+.adaptive-image {
+  width: 100%;
+  height: auto;
+}
+
 .content-wrapper {
   .container {
     outline: 1px dashed green;
-    background-color: $light-gray;
+    background: $light-gray;
   }
 
   .columns {
@@ -13,12 +18,28 @@
 }
 
 .alert {
-  &__text {
+  $alert: &;
+
+  &__text,
+  &__link {
     font-size: 11px;
     line-height: 13px;
   }
 
-  &__link {
-    color: $tertiary-color;
+  &--before-the-start {
+    #{$alert}__link {
+      color: $tertiary-color;
+    }
+  }
+
+  &--after-the-end {
+    #{$alert}__text {
+      text-align: justify;
+    }
+
+    #{$alert}__text,
+    #{$alert}__link {
+      color: $dark-gray;
+    }
   }
 }
