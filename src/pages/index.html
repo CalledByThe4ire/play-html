@@ -2,6 +2,11 @@
 layout: index-layout
 subject: Play HTML
 description: 'Хотите научиться web-разработке?'
+detailsList: {
+"circle": "Кто такой frontend-разработчик?",
+"triangle": "Какие навыки сейчас востребованы?",
+"rectangle": "Как устроиться в компанию после обучения?",
+}
 ---
 
 <wrapper class="content-wrapper">
@@ -65,6 +70,26 @@ description: 'Хотите научиться web-разработке?'
                 </columns>
               </row>
             </container>
+          </wrapper>
+          <spacer size-sm="0" size-lg="32"></spacer>
+          <wrapper class="details">
+            <p class="details__text">Мы&nbsp;расскажем все детали о&nbsp;том, с&nbsp;чего начать свой путь в&nbsp;разработке сайтов, и&nbsp;как вырасти в&nbsp;востребованного специалиста. Все вопросы&nbsp;Вы сможете задать спикеру на&nbsp;вебинаре&nbsp;:)</p>
+            <spacer size-sm="30" size-lg="38"></spacer>
+            <h2 class="details__title">План вебинара:</h2>
+            <menu class="vertical details__list list-details">
+              <spacer size="14"></spacer>
+              <container class="list-details__inner">
+              {{#each detailsList}}
+                <item class="list-details__item" href="#">
+                    <spacer size-sm="14" size-lg="8"></spacer>
+                    <row>
+                      <columns class="list-details__column list-details__column--first"><img class="list-details__image" src="assets/img/{{@key}}@2x.png" alt="{{@key}}" width="12" height="12"></columns>
+                      <columns class="list-details__column list-details__column--last"><p class="list-details__text">{{this}}</p></columns>
+                    </row>
+                </item>
+              {{/each}}
+            </container>
+            </menu>
           </wrapper>
         <wrapper class="alert alert--after-the-end">
           <spacer size="55"></spacer>
