@@ -7,6 +7,24 @@ detailsList: {
 "triangle": "Какие навыки сейчас востребованы?",
 "rectangle": "Как устроиться в компанию после обучения?",
 }
+socialsList: [
+"fb",
+"inst",
+"youtube",
+"telegram",
+"vk",
+]
+contactsList: {
+"mailto:study@htmlplay.com": "study@htmlplay.com",
+"tel:88006907668": "8-800-690-76-68",
+}
+linksList: [
+"Бесплатные вебинары",
+"Обучающие курсы",
+"Тесты",
+"Наш блог",
+"Истории студентов",
+]
 ---
 
 <wrapper class="webinar">
@@ -57,41 +75,139 @@ detailsList: {
                       <p class="date__day text-center">20</p>
                       <p class="date__time text-center">17:00</p>
                     </wrapper>
-                    <center><button href="#" class="date__button">На&nbsp;вебинар</button></center>
+                    <center>
+                      <button href="#" class="date__button">
+                        На&nbsp;вебинар
+                      </button>
+                    </center>
                   </wrapper>
                 </columns>
                 <columns small="12" large="8">
                   <img
-                  class="header__image adaptive-image"
-                  src="assets/img/intro@2x.png"
-                  width="352"
-                  height="286"
-                  alt="Декоративное изображение" />
+                    class="header__image adaptive-image"
+                    src="assets/img/header@2x.png"
+                    width="352"
+                    height="286"
+                    alt="Декоративное изображение"
+                  />
                 </columns>
               </row>
             </container>
           </wrapper>
           <spacer size-sm="0" size-lg="32"></spacer>
           <wrapper class="webinar__details details">
-            <p class="details__text">Мы&nbsp;расскажем все детали о&nbsp;том, с&nbsp;чего начать свой путь в&nbsp;разработке сайтов, и&nbsp;как вырасти в&nbsp;востребованного специалиста. Все вопросы&nbsp;Вы сможете задать спикеру на&nbsp;вебинаре&nbsp;:)</p>
+            <p class="details__text">
+              Мы&nbsp;расскажем все детали о&nbsp;том, с&nbsp;чего начать свой
+              путь в&nbsp;разработке сайтов, и&nbsp;как вырасти
+              в&nbsp;востребованного специалиста. Все вопросы&nbsp;Вы сможете
+              задать спикеру на&nbsp;вебинаре&nbsp;:)
+            </p>
             <spacer size-sm="30" size-lg="38"></spacer>
             <h2 class="details__title">План вебинара:</h2>
             <menu class="vertical details__list list-details">
               <spacer size="14"></spacer>
               <container class="list-details__inner">
-              {{#each detailsList}}
+                {{#each detailsList}}
                 <item class="list-details__item" href="#">
-                    <spacer size-sm="14" size-lg="8"></spacer>
-                    <row>
-                      <columns class="list-details__column list-details__column--first"><img class="list-details__image" src="assets/img/{{@key}}@2x.png" alt="{{@key}}" width="12" height="12"></columns>
-                      <columns class="list-details__column list-details__column--last"><p class="list-details__text">{{this}}</p></columns>
-                    </row>
+                  <spacer size-sm="14" size-lg="8"></spacer>
+                  <row>
+                    <columns
+                      class="list-details__column list-details__column--first"
+                      ><img
+                        class="list-details__image"
+                        src="assets/img/{{@key}}@2x.png"
+                        alt="{{@key}}"
+                        width="12"
+                        height="12"
+                    /></columns>
+                    <columns
+                      class="list-details__column list-details__column--last"
+                      ><p class="list-details__text">{{this}}</p></columns
+                    >
+                  </row>
                 </item>
-              {{/each}}
-            </container>
+                {{/each}}
+              </container>
             </menu>
           </wrapper>
         </wrapper>
+        <wrapper class="webinar__presenter presenter">
+          <h3 class="presenter__title">Ведущий вебинара</h3>
+          <center>
+            <img
+              class="presenter__image"
+              src="assets/img/presenter@2x.png"
+              alt="Ведущий вебинара Иван Васильев"
+              width="88"
+              height="88"
+            />
+          </center>
+          <span class="presenter__name">Иван Васильев</span>
+          <p class="presenter__position">
+            Frontend-разработчик компании Cats Development
+          </p>
+          <button class="promo__button" href="#">
+            Зарегистрироваться на&nbsp;вебинар
+          </button>
+        </wrapper>
+        <wrapper class="webinar__promo promo">
+          <center>
+            <img
+              class="promo__image"
+              src="assets/img/promo@2x.png"
+              alt="Декоративное изображение"
+              width="278"
+              height="278"
+            />
+          </center>
+          <h2>Среди участников вебинара будут разыграны ценные призы!</h2>
+          <button class="promo__button" href="#">Зарегистрироваться</button>
+          <p class="promo__alert">
+            Количество мест на&nbsp;вебинаре ограничено.
+          </p>
+        </wrapper>
+        <container class="webinar__footer footer">
+          <row>
+            <columns small="12" large="6">
+              <wrapper class="footer__contacts contacts">
+                <h4>Мы в&nbsp;социальных сетях</h4>
+                <menu class="footer__socials-list socials-list">
+                  {{#each socialsList}}
+                  <item class="socials-list__link" href="#" target="_blank"
+                    ><img
+                      src="assets/img/{{this}}@2x.png"
+                      alt="{{this}}"
+                      width="24"
+                      height="24"
+                  /></item>
+                  {{/each}}
+                </menu>
+                <h4>Мы в&nbsp;социальных сетях</h4>
+                <menu class="footer__contacts-list contacts-list">
+                  {{#each contactsList}}
+                  <item
+                    class="contacts-list__link"
+                    href="{{key}}"
+                    target="_blank"
+                    ><span>{{this}}</span></item
+                  >
+                  {{/each}}
+                </menu>
+              </wrapper>
+            </columns>
+            <columns small="12" large="6">
+              <wrapper class="footer__links links-list">
+                <h4>Полезные ссылки</h4>
+                <menu class="footer__links-list links-list">
+                  {{#each linksList}}
+                  <item class="links-list__link" href="#" target="_blank"
+                    ><p class="links-list__text">{{this}}</p></item>
+                  {{/each}}
+                </menu>
+              </wrapper>
+            </columns>
+          </row>
+        </container>
         <wrapper class="webinar__alert alert alert--after-the-end">
           <spacer size="55"></spacer>
           <p class="alert__text text-center">
