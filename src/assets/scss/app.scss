@@ -3,7 +3,7 @@
 @import 'helpers';
 
 // outer wrapper
-.content-wrapper {
+.webinar {
   .container {
     background: $light-gray;
   }
@@ -11,11 +11,11 @@
   .columns {
     padding-bottom: 0;
   }
-}
 
-// inner wrapper
-.inner {
-  background: $white;
+  // inner wrapper
+  &__content-wrapper {
+    background: $white;
+  }
 }
 
 // alert
@@ -51,8 +51,8 @@
   }
 }
 
-// intro
-.intro {
+// header
+.header {
   .wrapper-inner {
     padding-left: 8px;
     padding-right: 8px;
@@ -91,7 +91,7 @@
     }
   }
 
-  &__grid {
+  &__container {
     background: $white !important;
 
     center {
@@ -116,7 +116,7 @@
     padding-right: 35px;
   }
 
-  &__inner {
+  &__content-wrapper {
     .wrapper-inner {
       padding: 0;
       padding-bottom: 15px;
@@ -229,7 +229,7 @@
         &.columns.first,
         &.columns.last {
           margin: 0;
-          Margin: 0;
+          margin: 0;
         }
       }
     }
