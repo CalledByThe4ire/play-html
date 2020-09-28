@@ -201,6 +201,7 @@
   }
   &__item {
     padding: 0 !important;
+    pointer-events: none;
   }
 
   &__text {
