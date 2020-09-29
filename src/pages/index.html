@@ -186,12 +186,13 @@ linksList: [
                     Количество мест на&nbsp;вебинаре ограничено.
                   </p>
                 </wrapper>
-                <spacer size-lg="48"></spacer>
+                <spacer size="48"></spacer>
                 <container class="webinar__footer footer">
                   <row>
                     <columns small="12" large="6">
                       <wrapper class="footer__contacts contacts">
                         <h4>Мы в&nbsp;социальных сетях</h4>
+                        <spacer size-sm="10" size-lg="16"></spacer>
                         <menu class="footer__socials-list socials-list">
                           {{#each socialsList}}
                           <item
@@ -199,6 +200,7 @@ linksList: [
                             href="#"
                             target="_blank"
                             ><img
+                            class="socials-list__image"
                               src="assets/img/{{this}}@2x.png"
                               alt="{{this}}"
                               width="24"
@@ -206,14 +208,16 @@ linksList: [
                           /></item>
                           {{/each}}
                         </menu>
-                        <h4>Мы в&nbsp;социальных сетях</h4>
-                        <menu class="footer__contacts-list contacts-list">
+                        <spacer size="22"></spacer>
+                        <h4>Свяжитесь с&nbsp;нами</h4>
+                        <spacer size="10"></spacer>
+                        <menu class="footer__contacts-list contacts-list vertical">
                           {{#each contactsList}}
                           <item
                             class="contacts-list__link"
                             href="{{key}}"
                             target="_blank"
-                            ><span>{{this}}</span></item
+                            ><span class="contacts-list__text">{{this}}</span></item
                           >
                           {{/each}}
                         </menu>
@@ -221,7 +225,9 @@ linksList: [
                     </columns>
                     <columns small="12" large="6">
                       <wrapper class="footer__links links-list">
+                        <spacer size-sm="25" size-lg="0"></spacer>
                         <h4>Полезные ссылки</h4>
+                        <spacer size="15"></spacer>
                         <menu class="footer__links-list links-list vertical">
                           {{#each linksList}}
                           <item
@@ -236,12 +242,13 @@ linksList: [
                     </columns>
                   </row>
                 </container>
+                <spacer  size-sm="25" size-lg="30"></spacer>
               </columns>
             </row>
           </container>
         </wrapper>
         <wrapper class="webinar__alert alert alert--after-the-end">
-          <spacer size="55"></spacer>
+          <spacer  size-sm="45" size-lg="55"></spacer>
           <p class="alert__text text-center">
             Вы&nbsp;получили это&nbsp;письмо, так как являетесь
             пользователем портала HTMLPlay. Рассылка производится
