@@ -45,177 +45,213 @@ linksList: [
           <spacer size-sm="20" size-lg="12"></spacer>
         </wrapper>
         <wrapper class="webinar__content-wrapper">
-          <wrapper class="webinar__header header">
-            <spacer size-sm="25" size-lg="35"></spacer>
-            <center>
-              <img
-                class="header__logo"
-                src="assets/img/logo@2x.png"
-                width="140"
-                height="24"
-                alt="логотип компании Play HTML"
-              />
-            </center>
-            <spacer size="18"></spacer>
-            <h2 class="header__title text-center">
-              Хотите научиться<br />web-разработке?
-            </h2>
-            <spacer size="14"></spacer>
-            <p class="header__lead text-center">
-              Приглашаем Вас на&nbsp;бесплатный&nbsp;вебинар&laquo;Тренды
-              Frontend-разработки 2020&raquo;
-            </p>
-            <spacer size-sm="16" size-lg="24"></spacer>
-            <container class="header__container">
-              <row class="collapse">
-                <columns small="12" large="4">
-                  <wrapper class="header__date date">
-                    <wrapper class="date__content-wrapper">
-                      <p class="date__month text-center">июнь</p>
-                      <p class="date__day text-center">20</p>
-                      <p class="date__time text-center">17:00</p>
-                    </wrapper>
-                    <center>
-                      <button href="#" class="date__button">
-                        На&nbsp;вебинар
-                      </button>
-                    </center>
-                  </wrapper>
-                </columns>
-                <columns small="12" large="8">
-                  <img
-                    class="header__image adaptive-image"
-                    src="assets/img/header@2x.png"
-                    width="352"
-                    height="286"
-                    alt="Декоративное изображение"
-                  />
-                </columns>
-              </row>
-            </container>
-          </wrapper>
-          <spacer size-sm="0" size-lg="32"></spacer>
-          <wrapper class="webinar__details details">
-            <p class="details__text">
-              Мы&nbsp;расскажем все детали о&nbsp;том, с&nbsp;чего начать свой
-              путь в&nbsp;разработке сайтов, и&nbsp;как вырасти
-              в&nbsp;востребованного специалиста. Все вопросы&nbsp;Вы сможете
-              задать спикеру на&nbsp;вебинаре&nbsp;:)
-            </p>
-            <spacer size-sm="30" size-lg="38"></spacer>
-            <h2 class="details__title">План вебинара:</h2>
-            <menu class="vertical details__list list-details">
-              <spacer size="14"></spacer>
-              <container class="list-details__inner">
-                {{#each detailsList}}
-                <item class="list-details__item" href="#">
-                  <spacer size-sm="14" size-lg="8"></spacer>
-                  <row>
-                    <columns
-                      class="list-details__column list-details__column--first"
-                      ><img
-                        class="list-details__image"
-                        src="assets/img/{{@key}}@2x.png"
-                        alt="{{@key}}"
-                        width="12"
-                        height="12"
-                    /></columns>
-                    <columns
-                      class="list-details__column list-details__column--last"
-                      ><p class="list-details__text">{{this}}</p></columns
-                    >
-                  </row>
-                </item>
-                {{/each}}
-              </container>
-            </menu>
-          </wrapper>
-        </wrapper>
-        <wrapper class="webinar__presenter presenter">
-          <h3 class="presenter__title">Ведущий вебинара</h3>
-          <center>
-            <img
-              class="presenter__image"
-              src="assets/img/presenter@2x.png"
-              alt="Ведущий вебинара Иван Васильев"
-              width="88"
-              height="88"
-            />
-          </center>
-          <span class="presenter__name">Иван Васильев</span>
-          <p class="presenter__position">
-            Frontend-разработчик компании Cats Development
-          </p>
-          <button class="promo__button" href="#">
-            Зарегистрироваться на&nbsp;вебинар
-          </button>
-        </wrapper>
-        <wrapper class="webinar__promo promo">
-          <center>
-            <img
-              class="promo__image"
-              src="assets/img/promo@2x.png"
-              alt="Декоративное изображение"
-              width="278"
-              height="278"
-            />
-          </center>
-          <h2>Среди участников вебинара будут разыграны ценные призы!</h2>
-          <button class="promo__button" href="#">Зарегистрироваться</button>
-          <p class="promo__alert">
-            Количество мест на&nbsp;вебинаре ограничено.
-          </p>
-        </wrapper>
-        <container class="webinar__footer footer">
-          <row>
-            <columns small="12" large="6">
-              <wrapper class="footer__contacts contacts">
-                <h4>Мы в&nbsp;социальных сетях</h4>
-                <menu class="footer__socials-list socials-list">
-                  {{#each socialsList}}
-                  <item class="socials-list__link" href="#" target="_blank"
-                    ><img
-                      src="assets/img/{{this}}@2x.png"
-                      alt="{{this}}"
-                      width="24"
+          <container>
+            <row>
+              <columns small="12">
+                <wrapper class="webinar__header header">
+                  <spacer size-sm="25" size-lg="35"></spacer>
+                  <center>
+                    <img
+                      class="header__logo"
+                      src="assets/img/logo@2x.png"
+                      width="140"
                       height="24"
-                  /></item>
-                  {{/each}}
-                </menu>
-                <h4>Мы в&nbsp;социальных сетях</h4>
-                <menu class="footer__contacts-list contacts-list">
-                  {{#each contactsList}}
-                  <item
-                    class="contacts-list__link"
-                    href="{{key}}"
-                    target="_blank"
-                    ><span>{{this}}</span></item
-                  >
-                  {{/each}}
-                </menu>
-              </wrapper>
-            </columns>
-            <columns small="12" large="6">
-              <wrapper class="footer__links links-list">
-                <h4>Полезные ссылки</h4>
-                <menu class="footer__links-list links-list">
-                  {{#each linksList}}
-                  <item class="links-list__link" href="#" target="_blank"
-                    ><p class="links-list__text">{{this}}</p></item>
-                  {{/each}}
-                </menu>
-              </wrapper>
-            </columns>
-          </row>
-        </container>
+                      alt="логотип компании Play HTML"
+                    />
+                  </center>
+                  <spacer size="18"></spacer>
+                  <h2 class="header__title text-center">
+                    Хотите научиться<br />web-разработке?
+                  </h2>
+                  <spacer size="14"></spacer>
+                  <p class="header__lead text-center">
+                    Приглашаем Вас на&nbsp;бесплатный&nbsp;вебинар&laquo;Тренды
+                    Frontend-разработки 2020&raquo;
+                  </p>
+                  <spacer size-sm="16" size-lg="24"></spacer>
+                  <container class="header__container">
+                    <row class="collapse">
+                      <columns small="12" large="4">
+                        <wrapper class="header__date date">
+                          <wrapper class="date__content-wrapper">
+                            <p class="date__month text-center">июнь</p>
+                            <p class="date__day text-center">20</p>
+                            <p class="date__time text-center">17:00</p>
+                          </wrapper>
+                          <center>
+                            <button href="#" class="date__button">
+                              На&nbsp;вебинар
+                            </button>
+                          </center>
+                        </wrapper>
+                      </columns>
+                      <columns small="12" large="8">
+                        <img
+                          class="header__image adaptive-image"
+                          src="assets/img/header@2x.png"
+                          width="352"
+                          height="286"
+                          alt="Декоративное изображение"
+                        />
+                      </columns>
+                    </row>
+                  </container>
+                </wrapper>
+                <spacer size-sm="0" size-lg="32"></spacer>
+                <wrapper class="webinar__details details">
+                  <p class="details__text">
+                    Мы&nbsp;расскажем все детали о&nbsp;том, с&nbsp;чего начать
+                    свой путь в&nbsp;разработке сайтов, и&nbsp;как вырасти
+                    в&nbsp;востребованного специалиста. Все вопросы&nbsp;Вы
+                    сможете задать спикеру на&nbsp;вебинаре&nbsp;:)
+                  </p>
+                  <spacer size-sm="25" size-lg="30"></spacer>
+                  <h2 class="details__title">План вебинара:</h2>
+                  <menu class="vertical details__list list-details">
+                    <spacer size-sm="4" size-lg="8"></spacer>
+                    <container class="list-details__inner">
+                      {{#each detailsList}}
+                      <item class="list-details__item" href="#">
+                        <spacer size-sm="14" size-lg="8"></spacer>
+                        <row>
+                          <columns
+                            class="list-details__column list-details__column--first"
+                            ><img
+                              class="list-details__image"
+                              src="assets/img/{{@key}}@2x.png"
+                              alt="{{@key}}"
+                              width="12"
+                              height="12"
+                          /></columns>
+                          <columns
+                            class="list-details__column list-details__column--last"
+                            ><p class="list-details__text">{{this}}</p></columns
+                          >
+                        </row>
+                      </item>
+                      {{/each}}
+                    </container>
+                  </menu>
+                </wrapper>
+                <spacer size="40"></spacer>
+                <wrapper class="webinar__presenter presenter">
+                  <h3 class="presenter__title text-center">Ведущий вебинара</h3>
+                  <spacer size="25"></spacer>
+                  <center>
+                    <img
+                      class="presenter__image"
+                      src="assets/img/presenter@2x.png"
+                      alt="Ведущий вебинара Иван Васильев"
+                      width="88"
+                      height="88"
+                    />
+                  </center>
+                  <spacer size="12"></spacer>
+                  <span class="presenter__name text-center">Иван Васильев</span>
+                  <p class="presenter__position text-center">
+                    Frontend-разработчик компании&nbsp;Cats&nbsp;Development
+                  </p>
+                  <spacer size-sm="18" size-lg="25"></spacer>
+                  <center>
+                    <button class="presenter__button secondary radius" href="#">
+                      <span class="text-center"
+                        >Зарегистрироваться на&nbsp;вебинар</span
+                      >
+                    </button>
+                  </center>
+                </wrapper>
+                <spacer size-sm="0" size-lg="15"></spacer>
+                <wrapper class="webinar__promo promo">
+                  <center>
+                    <img
+                      class="promo__image"
+                      src="assets/img/promo@2x.png"
+                      alt="Декоративное изображение"
+                      width="278"
+                      height="278"
+                    />
+                  </center>
+                  <spacer size="15"></spacer>
+                  <h2 class="promo__title text-center">
+                    Среди участников вебинара будут разыграны ценные призы!
+                  </h2>
+                  <spacer size="25"></spacer>
+                  <center>
+                    <button class="promo__button secondary radius" href="#">
+                      Зарегистрироваться
+                    </button>
+                  </center>
+                  <spacer size="24"></spacer>
+                  <p class="promo__alert text-center">
+                    Количество мест на&nbsp;вебинаре ограничено.
+                  </p>
+                </wrapper>
+                <spacer size-lg="48"></spacer>
+                <container class="webinar__footer footer">
+                  <row>
+                    <columns small="12" large="6">
+                      <wrapper class="footer__contacts contacts">
+                        <h4>Мы в&nbsp;социальных сетях</h4>
+                        <menu class="footer__socials-list socials-list">
+                          {{#each socialsList}}
+                          <item
+                            class="socials-list__link"
+                            href="#"
+                            target="_blank"
+                            ><img
+                              src="assets/img/{{this}}@2x.png"
+                              alt="{{this}}"
+                              width="24"
+                              height="24"
+                          /></item>
+                          {{/each}}
+                        </menu>
+                        <h4>Мы в&nbsp;социальных сетях</h4>
+                        <menu class="footer__contacts-list contacts-list">
+                          {{#each contactsList}}
+                          <item
+                            class="contacts-list__link"
+                            href="{{key}}"
+                            target="_blank"
+                            ><span>{{this}}</span></item
+                          >
+                          {{/each}}
+                        </menu>
+                      </wrapper>
+                    </columns>
+                    <columns small="12" large="6">
+                      <wrapper class="footer__links links-list">
+                        <h4>Полезные ссылки</h4>
+                        <menu class="footer__links-list links-list vertical">
+                          {{#each linksList}}
+                          <item
+                            class="links-list__link"
+                            href="#"
+                            target="_blank"
+                            ><p class="links-list__text">{{this}}</p></item
+                          >
+                          {{/each}}
+                        </menu>
+                      </wrapper>
+                    </columns>
+                  </row>
+                </container>
+              </columns>
+            </row>
+          </container>
+        </wrapper>
         <wrapper class="webinar__alert alert alert--after-the-end">
           <spacer size="55"></spacer>
           <p class="alert__text text-center">
-            Вы&nbsp;получили это&nbsp;письмо, так как являетесь пользователем
-            портала HTMLPlay. Рассылка производится в&nbsp;соответствии
-            с&nbsp;пользовательским соглашением. Если вы&nbsp;не&nbsp;хотите
-            получать рассылку, вы&nbsp;можете
-            <a class="alert__link" href="#" target="_blank">отписаться</a> или
+            Вы&nbsp;получили это&nbsp;письмо, так как являетесь
+            пользователем портала HTMLPlay. Рассылка производится
+            в&nbsp;соответствии с&nbsp;пользовательским соглашением.
+            Если вы&nbsp;не&nbsp;хотите получать рассылку,
+            вы&nbsp;можете
+            <a class="alert__link" href="#" target="_blank"
+              >отписаться</a
+            >
+            или
             <a class="alert__link" href="#" target="_blank"
               >настроить&nbsp;параметры</a
             >.
@@ -225,7 +261,9 @@ linksList: [
           <p class="alert__text text-center">
             Если письмо отображается некорректно или вы&nbsp;хотите
             им&nbsp;поделиться,
-            <a class="alert__link" href="#" target="_blank">жмите&nbsp;сюда</a>.
+            <a class="alert__link" href="#" target="_blank"
+              >жмите&nbsp;сюда</a
+            >.
           </p>
 
           <spacer size="12"></spacer>

@@ -2,6 +2,29 @@
 @import 'foundation-emails';
 @import 'helpers';
 
+//headers
+h1 {
+  font-size: $h1-font-size;
+  line-height: 42px;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: 35px;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: 28px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: $global-font-size;
+  line-height: $global-line-height;
+}
+
 // outer wrapper
 .webinar {
   .container {
@@ -14,7 +37,9 @@
 
   // inner wrapper
   &__content-wrapper {
-    background: $white;
+    & > tbody .wrapper-inner .container {
+      background: $white;
+    }
   }
 }
 
@@ -53,6 +78,10 @@
 
 // header
 .header {
+  & > tbody .wrapper-inner .container {
+    background: none;
+  }
+
   .wrapper-inner {
     padding-left: 8px;
     padding-right: 8px;
@@ -92,8 +121,6 @@
   }
 
   &__container {
-    background: $white !important;
-
     center {
       min-width: auto !important;
     }
@@ -254,5 +281,62 @@
         }
       }
     }
+  }
+}
+
+// presenter
+.presenter {
+  background: none;
+
+  .wrapper-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  &__image {
+    width: 88px;
+    height: 88px;
+
+    @media #{$media-query} {
+      width: 88px !important;
+      height: 88px !important;
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @media #{$media-query} {
+      max-width: 205px;
+    }
+  }
+}
+
+// promo
+.promo {
+  background: none;
+
+  .wrapper-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  &__title {
+    color: $tertiary-color;
+
+    @media #{$media-query} {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
+
+//footer
+.footer {
+  background: none;
+
+  .wrapper-inner {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
