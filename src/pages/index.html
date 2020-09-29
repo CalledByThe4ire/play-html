@@ -107,31 +107,26 @@ linksList: [
                   </p>
                   <spacer size-sm="25" size-lg="30"></spacer>
                   <h2 class="details__title">План вебинара:</h2>
-                  <menu class="vertical details__list list-details">
-                    <spacer size-sm="4" size-lg="8"></spacer>
-                    <container class="list-details__inner">
-                      {{#each detailsList}}
-                      <item class="list-details__item" href="#">
-                        <spacer size-sm="14" size-lg="8"></spacer>
-                        <row>
-                          <columns
-                            class="list-details__column list-details__column--first"
-                            ><img
-                              class="list-details__image"
-                              src="assets/img/{{@key}}@2x.png"
-                              alt="{{@key}}"
-                              width="12"
-                              height="12"
-                          /></columns>
-                          <columns
-                            class="list-details__column list-details__column--last"
-                            ><p class="list-details__text">{{this}}</p></columns
-                          >
-                        </row>
-                      </item>
-                      {{/each}}
-                    </container>
-                  </menu>
+                  <spacer size="16"></spacer>
+                  <container class="details__list list-details">
+                    {{#each detailsList}}
+                    <row>
+                      <columns>
+                        <wrapper>
+                          <img
+                            class="list-details__image"
+                            src="assets/img/{{@key}}@2x.png"
+                            alt="{{@key}}"
+                            width="12"
+                            height="12"
+                          />
+                          <p class="list-details__text">{{this}}</p>
+                        </wrapper>
+                      </columns>
+                    </row>
+                    <spacer size-sm="12" size-lg="8"></spacer>
+                    {{/each}}
+                  </container>
                 </wrapper>
                 <spacer size="40"></spacer>
                 <wrapper class="webinar__presenter presenter">
@@ -200,7 +195,7 @@ linksList: [
                             href="#"
                             target="_blank"
                             ><img
-                            class="socials-list__image"
+                              class="socials-list__image"
                               src="assets/img/{{this}}@2x.png"
                               alt="{{this}}"
                               width="24"
@@ -211,13 +206,17 @@ linksList: [
                         <spacer size="22"></spacer>
                         <h4>Свяжитесь с&nbsp;нами</h4>
                         <spacer size="10"></spacer>
-                        <menu class="footer__contacts-list contacts-list vertical">
+                        <menu
+                          class="footer__contacts-list contacts-list vertical"
+                        >
                           {{#each contactsList}}
                           <item
                             class="contacts-list__link"
                             href="{{key}}"
                             target="_blank"
-                            ><span class="contacts-list__text">{{this}}</span></item
+                            ><span class="contacts-list__text"
+                              >{{this}}</span
+                            ></item
                           >
                           {{/each}}
                         </menu>
@@ -242,22 +241,19 @@ linksList: [
                     </columns>
                   </row>
                 </container>
-                <spacer  size-sm="25" size-lg="30"></spacer>
+                <spacer size-sm="25" size-lg="30"></spacer>
               </columns>
             </row>
           </container>
         </wrapper>
         <wrapper class="webinar__alert alert alert--after-the-end">
-          <spacer  size-sm="45" size-lg="55"></spacer>
+          <spacer size-sm="45" size-lg="55"></spacer>
           <p class="alert__text text-center">
-            Вы&nbsp;получили это&nbsp;письмо, так как являетесь
-            пользователем портала HTMLPlay. Рассылка производится
-            в&nbsp;соответствии с&nbsp;пользовательским соглашением.
-            Если вы&nbsp;не&nbsp;хотите получать рассылку,
-            вы&nbsp;можете
-            <a class="alert__link" href="#" target="_blank"
-              >отписаться</a
-            >
+            Вы&nbsp;получили это&nbsp;письмо, так как являетесь пользователем
+            портала HTMLPlay. Рассылка производится в&nbsp;соответствии
+            с&nbsp;пользовательским соглашением. Если вы&nbsp;не&nbsp;хотите
+            получать рассылку, вы&nbsp;можете
+            <a class="alert__link" href="#" target="_blank">отписаться</a>
             или
             <a class="alert__link" href="#" target="_blank"
               >настроить&nbsp;параметры</a
@@ -268,9 +264,7 @@ linksList: [
           <p class="alert__text text-center">
             Если письмо отображается некорректно или вы&nbsp;хотите
             им&nbsp;поделиться,
-            <a class="alert__link" href="#" target="_blank"
-              >жмите&nbsp;сюда</a
-            >.
+            <a class="alert__link" href="#" target="_blank">жмите&nbsp;сюда</a>.
           </p>
 
           <spacer size="12"></spacer>

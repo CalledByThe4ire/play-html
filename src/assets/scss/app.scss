@@ -193,10 +193,10 @@ h6 {
 .details {
   background: $primary-color;
 
-  .wrapper-inner {
+  & > tbody > tr > .wrapper-inner {
     padding-top: 40px;
     padding-left: 16px;
-    padding-bottom: 40px;
+    padding-bottom: 32px;
     padding-right: 16px;
 
     @media #{$media-query} {
@@ -211,83 +211,33 @@ h6 {
   }
 }
 
+//list-details
 .list-details {
-  $list-details: &;
+  background: none !important;
 
-  &.menu.vertical {
-    #{$list-details}__column {
-      &--first,
-      &--last {
-        @media #{$media-query} {
-          display: inline-block !important;
-        }
-      }
-    }
-  }
-
-  &__inner {
-    background: none !important;
-
-    @media #{$media-query} {
-      table &.container {
-        width: 100% !important;
-      }
-    }
-  }
-  &__item {
-    padding: 0 !important;
-    pointer-events: none;
-  }
-
-  &__text {
-    color: $white;
+  .wrapper-inner {
+    display: inline-table;
   }
 
   &__image {
+    display: table-cell;
     width: 12px;
     height: auto;
+    padding-right: 10px;
 
     @media #{$media-query} {
       width: 12px !important;
-      padding-top: 5px;
+      height: 12px !important;
+      padding-right: 25px;
     }
   }
 
-  &__column {
-    &--first,
-    &--last {
-      padding: 0 !important;
-      vertical-align: middle !important;
+  &__text {
+    display: table-cell;
+    color: $white;
 
-      @media #{$media-query} {
-        vertical-align: top !important;
-
-        &.columns.first,
-        &.columns.last {
-          margin: 0;
-          margin: 0;
-        }
-      }
-    }
-
-    &--first {
-      width: 5% !important;
-
-      @media #{$media-query} {
-        &.columns.first {
-          width: 10% !important;
-        }
-      }
-    }
-
-    &--last {
-      width: 95% !important;
-
-      @media #{$media-query} {
-        &.columns.last {
-          width: 80% !important;
-        }
-      }
+    @media #{$media-query} {
+      padding-right: 15px;
     }
   }
 }
