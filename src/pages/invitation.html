@@ -2,23 +2,23 @@
 layout: index-layout
 subject: Play HTML
 description: 'Хотите научиться web-разработке?'
-detailsList: {
+details-list: {
 "circle": "Кто такой frontend-разработчик?",
 "triangle": "Какие навыки сейчас востребованы?",
-"rectangle": "Как устроиться в компанию после обучения?",
+"rectangle": "Как устроиться в&nbsp;компанию после обучения?",
 }
-socialsList: [
+socials-list: [
 "fb",
 "inst",
 "youtube",
 "telegram",
 "vk",
 ]
-contactsList: {
+contacts-list: {
 "mailto:study@htmlplay.com": "study@htmlplay.com",
 "tel:88006907668": "8-800-690-76-68",
 }
-linksList: [
+links-list: [
 "Бесплатные вебинары",
 "Обучающие курсы",
 "Тесты",
@@ -109,7 +109,7 @@ linksList: [
                   <h2 class="details__title">План вебинара:</h2>
                   <spacer size="16"></spacer>
                   <container class="details__list list-details">
-                    {{#each detailsList}}
+                    {{#each details-list}}
                     <row>
                       <columns>
                         <wrapper>
@@ -120,7 +120,7 @@ linksList: [
                             width="12"
                             height="12"
                           />
-                          <p class="list-details__text">{{this}}</p>
+                          <p class="list-details__text"><raw>{{{this}}}</raw></p>
                         </wrapper>
                       </columns>
                     </row>
@@ -189,7 +189,7 @@ linksList: [
                         <h4>Мы в&nbsp;социальных сетях</h4>
                         <spacer size-sm="10" size-lg="16"></spacer>
                         <menu class="footer__socials-list socials-list">
-                          {{#each socialsList}}
+                          {{#each socials-list}}
                           <item
                             class="socials-list__link"
                             href="#"
@@ -209,7 +209,7 @@ linksList: [
                         <menu
                           class="footer__contacts-list contacts-list vertical"
                         >
-                          {{#each contactsList}}
+                          {{#each contacts-list}}
                           <item
                             class="contacts-list__link"
                             href="{{key}}"
@@ -228,7 +228,7 @@ linksList: [
                         <h4>Полезные ссылки</h4>
                         <spacer size="15"></spacer>
                         <menu class="footer__links-list links-list vertical">
-                          {{#each linksList}}
+                          {{#each links-list}}
                           <item
                             class="links-list__link"
                             href="#"

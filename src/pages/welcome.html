@@ -40,18 +40,18 @@ events: [
     description: 'Разберем тонкости использования самой популярной системы контроля версий.',
   },
 ]
-socialsList: [
+socials-list: [
 "fb",
 "inst",
 "youtube",
 "telegram",
 "vk",
 ]
-contactsList: {
+contacts-list: {
 "mailto:study@htmlplay.com": "study@htmlplay.com",
 "tel:88006907668": "8-800-690-76-68",
 }
-linksList: [
+links-list: [
 "Бесплатные вебинары",
 "Обучающие курсы",
 "Тесты",
@@ -159,7 +159,7 @@ linksList: [
                 <h4>Мы в&nbsp;социальных сетях</h4>
                 <spacer size-sm="10" size-lg="16"></spacer>
                 <menu class="footer__socials-list socials-list">
-                  {{#each socialsList}}
+                  {{#each socials-list}}
                   <item
                     class="socials-list__link"
                     href="#"
@@ -179,7 +179,7 @@ linksList: [
                 <menu
                   class="footer__contacts-list contacts-list vertical"
                 >
-                  {{#each contactsList}}
+                  {{#each contacts-list}}
                   <item
                     class="contacts-list__link"
                     href="{{key}}"
@@ -198,7 +198,7 @@ linksList: [
                 <h4>Полезные ссылки</h4>
                 <spacer size="15"></spacer>
                 <menu class="footer__links-list links-list vertical">
-                  {{#each linksList}}
+                  {{#each links-list}}
                   <item
                     class="links-list__link"
                     href="#"
