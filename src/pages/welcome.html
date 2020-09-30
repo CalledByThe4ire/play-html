@@ -2,12 +2,238 @@
 layout: index-layout
 subject: Play HTML
 description: 'Что вас ждет на&nbsp;курсе'
+main-menu-list: ['курсы', 'вебинары', 'о школе', 'распродажа']
+presenters: [
+  {
+  name: 'Антон Громов',
+  position: 'Фронтенд-разработчик в&nbsp;Cats Development',
+  image-title: "a.gromov",
+  },
+  {
+  name: 'Илья Раменский',
+  position: 'Team Lead в&nbsp;Lizard Software',
+  image-title: 'i.ramensky',
+  },
+  {
+  name: 'Игнатий Чубаров',
+  position: 'Преподаватель IT&nbsp;в&nbsp;РУИТ',
+  image-title: 'i.chubarov',
+  }
+]
+events: [
+  {
+    title: 'Тренды frontend-разработки',
+    date: '20&nbsp;июня',
+    time: '17:00',
+    description: 'Самые многообещающие направления развития фронтенда в&nbsp;2020 году',
+  },
+  {
+    title: 'Figma vs&nbsp;Photoshop',
+    date: '21&nbsp;июня',
+    time: '17:00',
+    description: 'Почему давно пора отказаться от&nbsp;последнего?',
+  },
+  {
+    title: 'Что такое Git и&nbsp;как его использовать?',
+    date: '22&nbsp;июня',
+    time: '17:00',
+    description: 'Разберем тонкости использования самой популярной системы контроля версий.',
+  },
+]
+socialsList: [
+"fb",
+"inst",
+"youtube",
+"telegram",
+"vk",
+]
+contactsList: {
+"mailto:study@htmlplay.com": "study@htmlplay.com",
+"tel:88006907668": "8-800-690-76-68",
+}
+linksList: [
+"Бесплатные вебинары",
+"Обучающие курсы",
+"Тесты",
+"Наш блог",
+"Истории студентов",
+]
 ---
 
 <wrapper class="welcome"></wrapper>
   <container>
     <row class="collapse">
       <columns>
+        <spacer size="55"></spacer>
+        <wrapper class="header">
+            <center>
+                <img
+                class="header__logo"
+                src="assets/img/logo@2x.png"
+                width="186"
+                height="32"
+                alt="логотип компании Play HTML"
+                />
+            </center>
+            <spacer size="0"></spacer>
+            <menu>
+              {{#each main-menu-list}}
+                <item href="#" target="_blank">{{this}}</item>
+              {{/each}}
+            </menu>
+            <spacer size="0"></spacer>
+            <wrapper class="intro">
+              <container>
+                <row>
+                  <columns small="12" large="8">
+                    <h4 class="intro__title">Здравствуйте, <span>&#123;&#123;name&#125;&#125;</span></h4>
+                    <spacer size="0"></spacer>
+                    <p class="intro__text">Благодарим вас за&nbsp;регистрацию на&nbsp;курс &laquo;Начальный html+css&raquo;.</p>
+                    <spacer size="0"></spacer>
+                    <p class="intro__text">Курс стартует 1&nbsp;июля в&nbsp;17.00 по&nbsp;московскому времени. Письма со&nbsp;ссылками для входа в&nbsp;кабинет придут на&nbsp;указанную почту за&nbsp;день до&nbsp;старта курса.</p>
+                  </columns>
+                  <columns small="12" large="4">
+                    <img src="assets/img/welcome/header@2x.png"
+                    alt="Декоративное изображение"
+                    width="175"
+                    height="269"
+                    />
+                  </columns>
+                </row>
+              </container>
+            </wrapper>
+        </wrapper>
+        <spacer size="0"></spacer>
+        <wrapper class="about">
+          <h2 class="about__title">Что вас ждет на&nbsp;курсе</h2>
+          <spacer size="0"></spacer>
+          <p class="about__text">Вы&nbsp;будете изучать теорию и&nbsp;методику на&nbsp;примере учебного проекта, который разработали наши эксперты. А&nbsp;применить полученные знания на&nbsp;практике вы&nbsp;сможете, выполняя задания по&nbsp;личному проекту.</p>
+          <spacer size="0"></spacer>
+          <p class="about__text">В&nbsp;этом вам будет помогать наставник&nbsp;&mdash; опытный специалист, который проверит домашние задания и&nbsp;поделится секретами мастерства. А&nbsp;если у&nbsp;вас останутся вопросы, наставник сможет ответить на&nbsp;них на&nbsp;консультации.</p>
+          <spacer size="0"></spacer>
+          <p class="about__text">После завершения курса вам нужно будет подготовить свой проект к&nbsp;защите&nbsp;&mdash; убедиться, что он&nbsp;реализован в&nbsp;соответствии с&nbsp;техническим заданием.</p>
+          <p class="about__text">Желаем вам продуктивной работы на&nbsp;интенсиве и&nbsp;успешной защиты. У&nbsp;вас всё получится, мы&nbsp;в&nbsp;вас верим!</p>
+        </wrapper>
+        <spacer size="0"></spacer>
+        <wrapper class="presenters">
+          <h2 class="presenters__title"></h2>
+          <spacer size="0"></spacer>
+          <container>
+            <row>
+            {{#each presenters as | presenter |}}
+            <columns small="12" large="4">
+              <wrapper class="presenters__item presenter">
+                <img src="assets/img/welcome/{{presenter.image-title}}@2x.png" alt="Антон Громов" width="88" height="88" />
+                <h4 class="presenter__title">{{presenter.name}}</h4>
+                <p class="presenter__position"><raw>{{{presenter.position}}}</raw></p>
+              </wrapper>
+              <spacer size="0"></spacer>
+            </columns>
+            {{/each}}
+            </row>
+          </container>
+        </wrapper>
+        <spacer size="0"></spacer>
+        <wrapper class="events">
+          <p class="events__intro">Пока вы&nbsp;ждёте начала курса, вам могут быть интересны вебинары на&nbsp;разные темы, которые проходят на&nbsp;платформе ежедневно.</p>
+          <spacer size="0"></spacer>
+          <h2 class="events__title">Другие мероприятия</h2>
+          <spacer size="0"></spacer>
+          {{#each events as | event |}}
+            <wrapper class="events__item event">
+              <h3 class="event__title"><raw>{{{event.title}}}</raw></h3>
+              <p class="event__date-and-time"><raw>{{{event.date}}}, {{{event.time}}}</raw></p>
+              <p class="event__description"><raw>{{{event.description}}}</raw></p>
+            </wrapper>
+          {{/each}}
+          <spacer size="0"></spacer>
+          <center><button class="events__button secondary radius">Все мероприятия</button></center>
+            <spacer size="0"></spacer>
+            <center><img src="assets/img/welcome/events@2x.png" alt="Декоративное изображение" width="273" height="290" /></center>
+        </wrapper>
+        <spacer size="0"></spacer>
+        <container class="welcome__footer footer">
+          <row>
+            <columns small="12" large="6">
+              <wrapper class="footer__contacts contacts">
+                <h4>Мы в&nbsp;социальных сетях</h4>
+                <spacer size-sm="10" size-lg="16"></spacer>
+                <menu class="footer__socials-list socials-list">
+                  {{#each socialsList}}
+                  <item
+                    class="socials-list__link"
+                    href="#"
+                    target="_blank"
+                    ><img
+                      class="socials-list__image"
+                      src="assets/img/{{this}}@2x.png"
+                      alt="{{this}}"
+                      width="24"
+                      height="24"
+                  /></item>
+                  {{/each}}
+                </menu>
+                <spacer size="22"></spacer>
+                <h4>Свяжитесь с&nbsp;нами</h4>
+                <spacer size="10"></spacer>
+                <menu
+                  class="footer__contacts-list contacts-list vertical"
+                >
+                  {{#each contactsList}}
+                  <item
+                    class="contacts-list__link"
+                    href="{{key}}"
+                    target="_blank"
+                    ><span class="contacts-list__text"
+                      >{{this}}</span
+                    ></item
+                  >
+                  {{/each}}
+                </menu>
+              </wrapper>
+            </columns>
+            <columns small="12" large="6">
+              <wrapper class="footer__links links-list">
+                <spacer size-sm="25" size-lg="0"></spacer>
+                <h4>Полезные ссылки</h4>
+                <spacer size="15"></spacer>
+                <menu class="footer__links-list links-list vertical">
+                  {{#each linksList}}
+                  <item
+                    class="links-list__link"
+                    href="#"
+                    target="_blank"
+                    ><p class="links-list__text">{{this}}</p></item
+                  >
+                  {{/each}}
+                </menu>
+              </wrapper>
+            </columns>
+          </row>
+        </container>
+        <spacer size="0"></spacer>
+        <span class="welcome__divider"></span>
+        <wrapper class="welcome__alert alert">
+          <spacer size="0"></spacer>
+          <p class="alert__text text-center">
+            Вы&nbsp;получили это&nbsp;письмо, так как являетесь пользователем
+            портала HTMLPlay. Рассылка производится в&nbsp;соответствии
+            с&nbsp;пользовательским соглашением. Если вы&nbsp;не&nbsp;хотите
+            получать рассылку, вы&nbsp;можете
+            <a class="alert__link" href="#" target="_blank">отписаться</a>
+            или
+            <a class="alert__link" href="#" target="_blank"
+              >настроить&nbsp;параметры</a
+            >.
+          </p>
+          <spacer size="0"></spacer>
+          <p class="alert__text text-center">
+            Если письмо отображается некорректно или вы&nbsp;хотите
+            им&nbsp;поделиться,
+            <a class="alert__link" href="#" target="_blank">жмите&nbsp;сюда</a>.
+          </p>
+        </wrapper>
+        <spacer size="0"></spacer>
       </columns>
     </row>
   </container>
