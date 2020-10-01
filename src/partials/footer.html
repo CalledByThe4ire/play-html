@@ -1,0 +1,48 @@
+<wrapper class="{{page}}__footer footer">
+  <container>
+    <row>
+      <columns small="12" large="6">
+        <wrapper class="footer__inner">
+          <h4 class="footer__title">Мы в&nbsp;социальных сетях</h4>
+          <spacer size-sm="10" size-lg="16"></spacer>
+          <menu class="footer__socials socials">
+            {{#each footer.socials}}
+            <item class="socials__link" href="#" target="_blank"
+              ><img
+                class="socials__image"
+                src="assets/img/{{this}}@2x.png"
+                alt="{{this}}"
+                width="24"
+                height="24"
+            /></item>
+            {{/each}}
+          </menu>
+          <spacer size="22"></spacer>
+          <h4 class="footer__title">Свяжитесь с&nbsp;нами</h4>
+          <spacer size="10"></spacer>
+          <menu class="footer__contacts contacts vertical">
+            {{#each footer.contacts}}
+            <item class="contacts__link" href="{{key}}" target="_blank"
+              ><span class="contacts__text">{{this}}</span></item
+            >
+            {{/each}}
+          </menu>
+        </wrapper>
+      </columns>
+      <columns small="12" large="6">
+        <wrapper class="footer__links links">
+          <spacer size-sm="25" size-lg="0"></spacer>
+          <h4 class="footer__title">Полезные ссылки</h4>
+          <spacer size="15"></spacer>
+          <menu class="footer__links links vertical">
+            {{#each footer.links}}
+            <item class="links__link" href="#" target="_blank"
+              ><p class="links__text">{{this}}</p></item
+            >
+            {{/each}}
+          </menu>
+        </wrapper>
+      </columns>
+    </row>
+  </container>
+</wrapper>

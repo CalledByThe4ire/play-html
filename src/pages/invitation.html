@@ -2,36 +2,18 @@
 layout: index-layout
 subject: Play HTML
 description: 'Хотите научиться web-разработке?'
-details-list: {
+details: {
 "circle": "Кто такой frontend-разработчик?",
 "triangle": "Какие навыки сейчас востребованы?",
 "rectangle": "Как устроиться в&nbsp;компанию после обучения?",
 }
-socials-list: [
-"fb",
-"inst",
-"youtube",
-"telegram",
-"vk",
-]
-contacts-list: {
-"mailto:study@htmlplay.com": "study@htmlplay.com",
-"tel:88006907668": "8-800-690-76-68",
-}
-links-list: [
-"Бесплатные вебинары",
-"Обучающие курсы",
-"Тесты",
-"Наш блог",
-"Истории студентов",
-]
 ---
 
 <wrapper class="invitation">
   <container>
     <row class="collapse">
       <columns>
-        <wrapper class="invitation__alert alert alert--before-the-start">
+        <wrapper class="invitation__alert alert alert--show-content">
           <spacer size="25"></spacer>
           <p class="alert__text text-center">
             Если вы не&nbsp;видите данное&nbsp;письмо, перейдите по&nbsp;<a
@@ -109,7 +91,7 @@ links-list: [
                   <h2 class="details__title">План вебинара:</h2>
                   <spacer size="16"></spacer>
                   <container class="details__list list-details">
-                    {{#each details-list}}
+                    {{#each details}}
                     <row>
                       <columns>
                         <wrapper>
@@ -182,93 +164,15 @@ links-list: [
                   </p>
                 </wrapper>
                 <spacer size="48"></spacer>
-                <container class="invitation__footer footer">
-                  <row>
-                    <columns small="12" large="6">
-                      <wrapper class="footer__contacts contacts">
-                        <h4>Мы в&nbsp;социальных сетях</h4>
-                        <spacer size-sm="10" size-lg="16"></spacer>
-                        <menu class="footer__socials-list socials-list">
-                          {{#each socials-list}}
-                          <item
-                            class="socials-list__link"
-                            href="#"
-                            target="_blank"
-                            ><img
-                              class="socials-list__image"
-                              src="assets/img/{{this}}@2x.png"
-                              alt="{{this}}"
-                              width="24"
-                              height="24"
-                          /></item>
-                          {{/each}}
-                        </menu>
-                        <spacer size="22"></spacer>
-                        <h4>Свяжитесь с&nbsp;нами</h4>
-                        <spacer size="10"></spacer>
-                        <menu
-                          class="footer__contacts-list contacts-list vertical"
-                        >
-                          {{#each contacts-list}}
-                          <item
-                            class="contacts-list__link"
-                            href="{{key}}"
-                            target="_blank"
-                            ><span class="contacts-list__text"
-                              >{{this}}</span
-                            ></item
-                          >
-                          {{/each}}
-                        </menu>
-                      </wrapper>
-                    </columns>
-                    <columns small="12" large="6">
-                      <wrapper class="footer__links links-list">
-                        <spacer size-sm="25" size-lg="0"></spacer>
-                        <h4>Полезные ссылки</h4>
-                        <spacer size="15"></spacer>
-                        <menu class="footer__links-list links-list vertical">
-                          {{#each links-list}}
-                          <item
-                            class="links-list__link"
-                            href="#"
-                            target="_blank"
-                            ><p class="links-list__text">{{this}}</p></item
-                          >
-                          {{/each}}
-                        </menu>
-                      </wrapper>
-                    </columns>
-                  </row>
-                </container>
+                {{> footer}}
                 <spacer size-sm="25" size-lg="30"></spacer>
               </columns>
             </row>
           </container>
         </wrapper>
-        <wrapper class="invitation__alert alert alert--after-the-end">
-          <spacer size-sm="45" size-lg="55"></spacer>
-          <p class="alert__text text-center">
-            Вы&nbsp;получили это&nbsp;письмо, так как являетесь пользователем
-            портала HTMLPlay. Рассылка производится в&nbsp;соответствии
-            с&nbsp;пользовательским соглашением. Если вы&nbsp;не&nbsp;хотите
-            получать рассылку, вы&nbsp;можете
-            <a class="alert__link" href="#" target="_blank">отписаться</a>
-            или
-            <a class="alert__link" href="#" target="_blank"
-              >настроить&nbsp;параметры</a
-            >.
-          </p>
-
-          <spacer size="12"></spacer>
-          <p class="alert__text text-center">
-            Если письмо отображается некорректно или вы&nbsp;хотите
-            им&nbsp;поделиться,
-            <a class="alert__link" href="#" target="_blank">жмите&nbsp;сюда</a>.
-          </p>
-
-          <spacer size="35"></spacer>
-        </wrapper>
+        <spacer size-sm="45" size-lg="55"></spacer>
+        {{> alert}}
+        <spacer size="35"></spacer>
       </columns>
     </row>
   </container>

@@ -40,24 +40,6 @@ events: [
     description: 'Разберем тонкости использования самой популярной системы контроля версий.',
   },
 ]
-socials-list: [
-"fb",
-"inst",
-"youtube",
-"telegram",
-"vk",
-]
-contacts-list: {
-"mailto:study@htmlplay.com": "study@htmlplay.com",
-"tel:88006907668": "8-800-690-76-68",
-}
-links-list: [
-"Бесплатные вебинары",
-"Обучающие курсы",
-"Тесты",
-"Наш блог",
-"Истории студентов",
-]
 ---
 
 <wrapper class="welcome"></wrapper>
@@ -152,88 +134,11 @@ links-list: [
             <center><img src="assets/img/welcome/events@2x.png" alt="Декоративное изображение" width="273" height="290" /></center>
         </wrapper>
         <spacer size="0"></spacer>
-        <container class="welcome__footer footer">
-          <row>
-            <columns small="12" large="6">
-              <wrapper class="footer__contacts contacts">
-                <h4>Мы в&nbsp;социальных сетях</h4>
-                <spacer size-sm="10" size-lg="16"></spacer>
-                <menu class="footer__socials-list socials-list">
-                  {{#each socials-list}}
-                  <item
-                    class="socials-list__link"
-                    href="#"
-                    target="_blank"
-                    ><img
-                      class="socials-list__image"
-                      src="assets/img/{{this}}@2x.png"
-                      alt="{{this}}"
-                      width="24"
-                      height="24"
-                  /></item>
-                  {{/each}}
-                </menu>
-                <spacer size="22"></spacer>
-                <h4>Свяжитесь с&nbsp;нами</h4>
-                <spacer size="10"></spacer>
-                <menu
-                  class="footer__contacts-list contacts-list vertical"
-                >
-                  {{#each contacts-list}}
-                  <item
-                    class="contacts-list__link"
-                    href="{{key}}"
-                    target="_blank"
-                    ><span class="contacts-list__text"
-                      >{{this}}</span
-                    ></item
-                  >
-                  {{/each}}
-                </menu>
-              </wrapper>
-            </columns>
-            <columns small="12" large="6">
-              <wrapper class="footer__links links-list">
-                <spacer size-sm="25" size-lg="0"></spacer>
-                <h4>Полезные ссылки</h4>
-                <spacer size="15"></spacer>
-                <menu class="footer__links-list links-list vertical">
-                  {{#each links-list}}
-                  <item
-                    class="links-list__link"
-                    href="#"
-                    target="_blank"
-                    ><p class="links-list__text">{{this}}</p></item
-                  >
-                  {{/each}}
-                </menu>
-              </wrapper>
-            </columns>
-          </row>
-        </container>
+        {{> footer}}
         <spacer size="0"></spacer>
-        <span class="welcome__divider"></span>
-        <wrapper class="welcome__alert alert">
-          <spacer size="0"></spacer>
-          <p class="alert__text text-center">
-            Вы&nbsp;получили это&nbsp;письмо, так как являетесь пользователем
-            портала HTMLPlay. Рассылка производится в&nbsp;соответствии
-            с&nbsp;пользовательским соглашением. Если вы&nbsp;не&nbsp;хотите
-            получать рассылку, вы&nbsp;можете
-            <a class="alert__link" href="#" target="_blank">отписаться</a>
-            или
-            <a class="alert__link" href="#" target="_blank"
-              >настроить&nbsp;параметры</a
-            >.
-          </p>
-          <spacer size="0"></spacer>
-          <p class="alert__text text-center">
-            Если письмо отображается некорректно или вы&nbsp;хотите
-            им&nbsp;поделиться,
-            <a class="alert__link" href="#" target="_blank">жмите&nbsp;сюда</a>.
-          </p>
-        </wrapper>
+        <hr />
         <spacer size="0"></spacer>
+        {{> alert}}
       </columns>
     </row>
   </container>
