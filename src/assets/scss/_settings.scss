@@ -30,7 +30,7 @@ $dark-gray: #828282;
 $black: #141414;
 $white: #ffffff;
 $pre-color: #ff6908;
-$global-width: 568px;
+$global-width: 600px;
 $global-width-small: 95%;
 $global-gutter: 16px;
 $body-background: $light-gray;
@@ -39,7 +39,7 @@ $global-padding: 16px;
 $global-margin: 0;
 $global-radius: 5px;
 $global-rounded: 500px;
-$global-breakpoint: $global-width + $global-gutter * 2;
+$global-breakpoint: $global-width;
 
 // 2. Grid
 // -------
