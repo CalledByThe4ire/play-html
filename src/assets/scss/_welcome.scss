@@ -1,0 +1,64 @@
+@import 'settings';
+@import 'foundation-emails';
+@import 'gui';
+
+.welcome {
+  .menu {
+    &__item {
+      padding: 0 !important;
+
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      &:nth-child(1) {
+        a {
+          color: $primary-color;
+        }
+      }
+
+      &:nth-child(2) {
+        a {
+          color: $secondary-color;
+        }
+      }
+
+      &:nth-child(3) {
+        a {
+          color: $tertiary-color;
+        }
+      }
+
+      &:nth-child(4) {
+        a {
+          color: $quaternary-color;
+        }
+      }
+    }
+  }
+
+  .intro {
+    background: $primary-color;
+
+    .container {
+      background: none;
+    }
+
+    .wrapper-inner {
+      padding-top: 30px;
+      padding-right: 25px;
+      padding-bottom: 30px;
+      padding-left: 25px;
+    }
+
+    &__title {
+      color: $tertiary-color;
+    }
+
+    &__text {
+      color: $white;
+    }
+  }
+}

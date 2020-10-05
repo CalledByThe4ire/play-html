@@ -1,15 +1,15 @@
 <wrapper class="{{page}}__footer footer">
-  <container>
-    <row>
-      <columns small="12" large="6">
-        <wrapper class="footer__inner">
-          <h4 class="footer__title">Мы в&nbsp;социальных сетях</h4>
+  <container class="footer__container">
+    <row class="footer__row">
+      <columns class="footer__columns" small="12" large="6">
+        <wrapper class="footer__socials socials">
+          <h4 class="socials__title">Мы в&nbsp;социальных сетях</h4>
           <spacer size-sm="10" size-lg="16"></spacer>
-          <menu class="footer__socials socials">
+          <menu class="socials__menu menu-socials">
             {{#each footer.socials}}
-            <item class="socials__link" href="#" target="_blank"
+            <item class="menu-socials__link" href="#" target="_blank"
               ><img
-                class="socials__image"
+                class="menu-socials__image"
                 src="assets/img/{{this}}@2x.png"
                 alt="{{this}}"
                 width="24"
@@ -17,27 +17,29 @@
             /></item>
             {{/each}}
           </menu>
-          <spacer size="22"></spacer>
-          <h4 class="footer__title">Свяжитесь с&nbsp;нами</h4>
+        </wrapper>
+        <spacer size="22"></spacer>
+        <wrapper class="footer__contacts contacts">
+          <h4 class="contacts__title">Свяжитесь с&nbsp;нами</h4>
           <spacer size="10"></spacer>
-          <menu class="footer__contacts contacts vertical">
+          <menu class="contacts__menu menu-contacts vertical">
             {{#each footer.contacts}}
-            <item class="contacts__link" href="{{key}}" target="_blank"
-              ><span class="contacts__text">{{this}}</span></item
+            <item class="menu-contacts__link" href="{{key}}" target="_blank"
+              ><p class="menu-contacts__text text-left">{{this}}</p></item
             >
             {{/each}}
           </menu>
         </wrapper>
       </columns>
-      <columns small="12" large="6">
+      <columns class="footer__columns" small="12" large="6">
         <wrapper class="footer__links links">
           <spacer size-sm="25" size-lg="0"></spacer>
-          <h4 class="footer__title">Полезные ссылки</h4>
+          <h4 class="links__title">Полезные ссылки</h4>
           <spacer size="15"></spacer>
-          <menu class="footer__links links vertical">
+          <menu class="links__menu menu-links vertical">
             {{#each footer.links}}
-            <item class="links__link" href="#" target="_blank"
-              ><p class="links__text">{{this}}</p></item
+            <item class="menu-links__link" href="#" target="_blank"
+              ><p class="menu-links__text">{{this}}</p></item
             >
             {{/each}}
           </menu>

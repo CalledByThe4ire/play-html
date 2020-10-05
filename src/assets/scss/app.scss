@@ -1,13 +1,7 @@
 @import 'invitation';
+@import 'welcome';
 
 .alert {
-  .wrapper-inner {
-    @media #{$media-query} {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-  }
-
   &__text {
     text-align: justify;
   }
@@ -23,26 +17,25 @@
 .footer {
   background: none;
 
-  .columns.first {
-    .wrapper-inner {
-      padding-left: 18px;
-    }
+  &__columns {
+    padding: 0 !important;
   }
+}
 
-  .columns.last {
-    padding-left: 16px;
+.socials,
+.contacts {
+  .wrapper-inner {
+    padding-left: $global-padding;
+    padding-right: $global-padding;
 
-    .wrapper-inner {
-      padding-right: 18px;
-
-      @media #{$media-query} {
-        padding-left: 18px;
-      }
+    @media #{$media-query} {
+      padding-left: $global-padding / 2;
+      padding-right: $global-padding / 2;
     }
   }
 }
 
-.socials {
+.menu-socials {
   width: 62% !important;
 
   &__link {
@@ -61,11 +54,8 @@
   }
 }
 
-.contacts {
+.menu-contacts {
   &__link {
-    float: left !important;
-    text-align: left !important;
-    width: 100%;
     padding: 0 !important;
     padding-bottom: 5px !important;
 
@@ -89,6 +79,13 @@
 }
 
 .links {
+  .wrapper-inner {
+    padding-left: $global-padding / 2;
+    padding-right: $global-padding / 2;
+  }
+}
+
+.menu-links {
   &__link {
     padding: 0 !important;
     padding-bottom: 8px !important;

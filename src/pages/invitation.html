@@ -3,42 +3,41 @@ layout: index-layout
 subject: Play HTML
 description: 'Хотите научиться web-разработке?'
 details: {
-"circle": "Кто такой frontend-разработчик?",
+"circle": "Кто такой frontend&#8209;разработчик?",
 "triangle": "Какие навыки сейчас востребованы?",
 "rectangle": "Как устроиться в&nbsp;компанию после обучения?",
 }
 ---
 
 <wrapper class="invitation">
-  <container>
-    <row class="collapse">
-      <columns>
+  <container class="invitation__container">
+    <row class="invitation__row">
+      <columns class="invitation__columns">
         <wrapper class="invitation__alert alert alert--show-content">
-          <container>
-            <row>
-              <columns>
-                <spacer size="25"></spacer>
+          <container class="alert__container">
+            <row class="alert__row">
+              <columns class="alert__columns">
+                <spacer size="9"></spacer>
                 <p class="alert__text text-center">
                   Если вы не&nbsp;видите данное&nbsp;письмо, перейдите
                   по&nbsp;<a class="alert__link" href="#" target="_blank"
                     >ссылке</a
                   >
                 </p>
-
-                <spacer size-sm="20" size-lg="12"></spacer
-              ></columns>
+              </columns>
             </row>
           </container>
         </wrapper>
-        <wrapper class="invitation__content-wrapper">
-          <container>
-            <row>
-              <columns small="12">
+
+        <wrapper class="invitation__content-wrapper content-wrapper">
+          <container class="content-wrapper__container">
+            <row class="content-wrapper__row collapsed">
+              <columns class="content-wrapper__columns">
                 <wrapper class="invitation__header header">
-                  <container>
-                    <row>
-                      <columns>
-                        <spacer size-sm="25" size-lg="35"></spacer>
+                  <container class="header__container">
+                    <row class="header__row collapsed">
+                      <columns class="header__columns">
+                        <spacer size="32"></spacer>
                         <center>
                           <img
                             class="header__logo"
@@ -48,53 +47,44 @@ details: {
                             alt="логотип компании Play HTML"
                           />
                         </center>
-                        <spacer size="18"></spacer>
+                        <spacer size="16"></spacer>
                         <h2 class="header__title text-center">
                           Хотите научиться<br />web-разработке?
                         </h2>
-                        <spacer size="14"></spacer>
+                        <spacer size="16"></spacer>
                         <p class="header__lead text-center">
-                          Приглашаем Вас
-                          на&nbsp;бесплатный&nbsp;вебинар&laquo;Тренды
-                          Frontend-разработки 2020&raquo;
+                          Приглашаем Вас на&nbsp;бесплатный&nbsp;вебинар
+                          Тренды&nbsp;Frontend-разработки&nbsp;2020&raquo;
                         </p>
                         <spacer size-sm="16" size-lg="24"></spacer>
-                        <wrapper class="header__inner">
-                          <container>
-                            <row class="collapse">
-                              <columns small="12" large="4">
-                                <wrapper class="header__date date">
-                                  <wrapper class="date__content-wrapper">
-                                    <p class="date__month text-center">июнь</p>
-                                    <p class="date__day text-center">20</p>
-                                    <p class="date__time text-center">17:00</p>
-                                  </wrapper>
-                                  <center>
-                                    <button href="#" class="date__button">
-                                      На&nbsp;вебинар
-                                    </button>
-                                  </center>
-                                </wrapper>
-                              </columns>
-                              <columns small="12" large="8">
-                                <spacer size-sm="14" size-lg="0"></spacer>
-                                <img
-                                  class="header__image adaptive-image"
-                                  src="assets/img/invitation/header@2x.png"
-                                  width="352"
-                                  height="286"
-                                  alt="Декоративное изображение"
-                                />
-                                <spacer size-sm="8" size-lg="0"></spacer>
-                              </columns>
-                            </row>
-                          </container>
-                          <spacer size-sm="0" size-lg="32"></spacer>
+                      </columns>
+                    </row>
+                    <row class="header__row collapsed">
+                      <columns class="header__columns" small="12" large="4">
+                        <wrapper class="header__date date">
+                          <p class="date__month text-center">июнь</p>
+                          <p class="date__day text-center">20</p>
+                          <p class="date__time text-center">17:00</p>
+                          <spacer size="14"></spacer>
+                          <button href="#" class="date__button radius">
+                            На&nbsp;вебинар
+                          </button>
                         </wrapper>
+                      </columns>
+                      <columns class="header__columns" small="12" large="8">
+                        <img
+                          class="header__image"
+                          src="assets/img/invitation/header@2x.png"
+                          width="352"
+                          height="286"
+                          alt="Декоративное изображение"
+                        />
+                        <spacer size="30"></spacer>
                       </columns>
                     </row>
                   </container>
                 </wrapper>
+
                 <wrapper class="invitation__details details">
                   <container class="details__container">
                     <row class="details__row">
@@ -106,14 +96,14 @@ details: {
                           вопросы&nbsp;Вы сможете задать спикеру
                           на&nbsp;вебинаре&nbsp;:)
                         </p>
-                        <spacer size-sm="25" size-lg="30"></spacer>
+                        <spacer size-sm="25" size-lg="32"></spacer>
                         <h2 class="details__title">План вебинара:</h2>
                         <spacer size="16"></spacer>
                         <wrapper class="details__list list-details">
-                          <container>
+                          <container class="list-details__container">
                             {{#each details}}
-                            <row>
-                              <columns>
+                            <row class="list-details__row">
+                              <columns class="list-details__columns">
                                 <wrapper>
                                   <img
                                     class="list-details__image"
@@ -136,10 +126,12 @@ details: {
                     </row>
                   </container>
                 </wrapper>
+
+                <spacer size="40"></spacer>
                 <wrapper class="invitation__presenter presenter">
-                  <container>
-                    <row>
-                      <columns>
+                  <container class="presenter__container">
+                    <row class="presenter__row">
+                      <columns class="presenter__columns">
                         <h3 class="presenter__title text-center">
                           Ведущий вебинара
                         </h3>
@@ -176,10 +168,12 @@ details: {
                     </row>
                   </container>
                 </wrapper>
+
+                <spacer size="15"></spacer>
                 <wrapper class="invitation__promo promo">
-                  <container>
-                    <row>
-                      <columns>
+                  <container class="promo__container">
+                    <row class="promo__row">
+                      <columns class="promo__columns">
                         <center>
                           <img
                             class="promo__image"
@@ -189,7 +183,7 @@ details: {
                             height="278"
                           />
                         </center>
-                        <spacer size-sm="0" size-lg="15"></spacer>
+                        <spacer size-sm="35" size-lg="15"></spacer>
                         <h2 class="promo__title text-center">
                           Среди участников вебинара будут разыграны ценные
                           призы!
@@ -207,19 +201,21 @@ details: {
                         <p class="promo__alert text-center">
                           Количество мест на&nbsp;вебинаре ограничено.
                         </p>
-                        <spacer size="48"></spacer>
                       </columns>
                     </row>
                   </container>
                 </wrapper>
+
+                <spacer size="30"></spacer>
                 {{> footer}}
-                <spacer size-sm="20" size-lg="30"></spacer>
-                {{> alert}}
-                <spacer size="35"></spacer>
+                <spacer size-sm="25" size-lg="30"></spacer>
               </columns>
             </row>
           </container>
         </wrapper>
+
+        <spacer size-sm="48" size-lg="58"></spacer>
+        {{> alert}}
       </columns>
     </row>
   </container>

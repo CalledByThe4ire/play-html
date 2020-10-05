@@ -1,27 +1,33 @@
 @import 'settings';
 @import 'foundation-emails';
 @import 'gui';
-@import 'helpers';
 
 .invitation {
   .wrapper-inner {
     background: none;
+    outline: 1px dashed red;
   }
 
-  .container {
-    background: $light-gray;
+  &__container {
+    background: $light-gray !important;
   }
 
-  .columns {
-    padding-bottom: 0;
+  &__columns {
+    padding-top: $global-padding;
+    padding-bottom: $global-padding * 2 !important;
+  }
+
+  .content-wrapper {
+    &__container {
+      background: $white;
+    }
+
+    &__columns {
+      padding: 0;
+    }
   }
 
   .alert {
-    .wrapper-inner {
-      padding-left: $global-padding;
-      padding-right: $global-padding;
-    }
-
     &.alert--show-content {
       .alert__link {
         color: $tertiary-color;
@@ -30,26 +36,19 @@
   }
 
   .header {
-    .container {
-      background: $white;
-    }
-
     .wrapper-inner {
-      padding-left: $global-padding;
-      padding-right: $global-padding;
+      padding: 0;
+      padding-left: $global-padding / 2;
+      padding-right: $global-padding / 2;
+
+      @media #{$media-query} {
+        padding-left: $global-padding;
+        padding-right: $global-padding;
+      }
     }
 
-    &__inner {
-      .wrapper-inner {
-        padding-left: $global-padding / 2;
-        padding-right: $global-padding / 2;
-      }
-
-      .container {
-        center {
-          min-width: auto !important;
-        }
-      }
+    &__columns {
+      padding: 0;
     }
 
     &__logo {
@@ -70,8 +69,8 @@
     }
 
     &__lead {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: $global-padding;
+      padding-right: $global-padding;
       font-size: 24px;
       line-height: 28px;
       color: $secondary-color;
@@ -90,10 +89,6 @@
     background: $secondary-color;
     border-radius: $global-radius;
 
-    .container {
-      background: $quaternary-color;
-    }
-
     .wrapper-inner {
       padding-top: 15px;
       padding-left: 35px;
@@ -101,11 +96,8 @@
       padding-right: 35px;
     }
 
-    &__content-wrapper {
-      .wrapper-inner {
-        padding: 0;
-        padding-bottom: 15px;
-      }
+    &__container {
+      background: none;
     }
 
     &__month,
@@ -130,23 +122,22 @@
       table {
         td {
           background: $quaternary-color !important;
-          border-radius: $global-radius;
         }
         a {
           border-color: $quaternary-color;
         }
       }
+
+      @media #{$media-query} {
+        margin: auto;
+        margin: auto;
+      }
     }
   }
 
   .details {
-    .container {
+    &__container {
       background: $primary-color;
-    }
-
-    .wrapper-inner {
-      padding-left: $global-padding;
-      padding-right: $global-padding;
     }
 
     &__columns {
@@ -168,10 +159,16 @@
   }
 
   .list-details {
-    background: none !important;
-
     .wrapper-inner {
       display: inline-table;
+    }
+
+    &__container {
+      background: none !important;
+    }
+
+    &__columns {
+      padding: 0;
     }
 
     &__image {
@@ -199,18 +196,17 @@
   }
 
   .presenter {
-    .container {
-      background: $white;
-    }
-
     .wrapper-inner {
       padding-left: $global-padding;
       padding-right: $global-padding;
     }
 
-    .columns {
-      padding-top: 40px;
-      padding-bottom: 15px;
+    &__container {
+      background: $white;
+    }
+
+    &__columns {
+      padding: 0;
 
       @media #{$media-query} {
         padding-bottom: 0;
@@ -252,28 +248,6 @@
       @media #{$media-query} {
         font-size: 24px;
         line-height: 28px;
-      }
-    }
-  }
-
-  .footer {
-    .container {
-      background: $white;
-    }
-
-    .wrapper-inner {
-      padding-left: $global-padding;
-      padding-right: $global-padding;
-      padding-bottom: 25px;
-    }
-
-    &__inner {
-      .wrapper-inner {
-        padding-bottom: 30px;
-
-        @media #{$media-query} {
-          padding-bottom: 0;
-        }
       }
     }
   }

@@ -42,12 +42,12 @@ events: [
 ]
 ---
 
-<wrapper class="welcome"></wrapper>
+<wrapper class="welcome">
   <container>
     <row class="collapse">
       <columns>
         <spacer size="55"></spacer>
-        <wrapper class="header">
+        <wrapper class="welcome__header header">
             <center>
                 <img
                 class="header__logo"
@@ -57,19 +57,19 @@ events: [
                 alt="логотип компании Play HTML"
                 />
             </center>
-            <spacer size="0"></spacer>
-            <menu>
+            <spacer size="50"></spacer>
+            <menu class="welcome__menu">
               {{#each main-menu-list}}
-                <item href="#" target="_blank">{{this}}</item>
+                <item class="menu__item" href="#" target="_blank">{{this}}</item>
               {{/each}}
             </menu>
-            <spacer size="0"></spacer>
-            <wrapper class="intro">
+            <spacer size="25"></spacer>
+            <wrapper class="welcome__intro intro">
               <container>
                 <row>
                   <columns small="12" large="8">
                     <h4 class="intro__title">Здравствуйте, <span>&#123;&#123;name&#125;&#125;</span></h4>
-                    <spacer size="0"></spacer>
+                    <spacer size="24"></spacer>
                     <p class="intro__text">Благодарим вас за&nbsp;регистрацию на&nbsp;курс &laquo;Начальный html+css&raquo;.</p>
                     <spacer size="0"></spacer>
                     <p class="intro__text">Курс стартует 1&nbsp;июля в&nbsp;17.00 по&nbsp;московскому времени. Письма со&nbsp;ссылками для входа в&nbsp;кабинет придут на&nbsp;указанную почту за&nbsp;день до&nbsp;старта курса.</p>
