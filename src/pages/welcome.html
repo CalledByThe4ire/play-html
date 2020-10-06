@@ -17,7 +17,7 @@ presenters:
     },
     {
       name: 'Игнатий Чубаров',
-      position: 'Преподаватель IT&nbsp;в&nbsp;<br>РУИТ',
+      position: 'Преподаватель IT&nbsp;в&nbsp;РУИТ',
       image-title: 'i.chubarov',
     },
   ]
@@ -200,30 +200,37 @@ events:
                           интересны вебинары на&nbsp;разные темы, которые
                           проходят на&nbsp;платформе<br />ежедневно.
                         </p>
+                        <spacer size-sm="45" size-lg="25"></spacer>
                         <h2 class="events__title text-center">
                           Другие мероприятия
                         </h2>
-                        <spacer size="0"></spacer>
+                        <spacer size-sm="16" size-lg="25"></spacer>
                         {{#each events as | event |}}
                         <wrapper class="events__item event">
-                          <h3 class="event__title">
-                            <raw>{{{event.title}}}</raw>
-                          </h3>
-                          <p class="event__date-and-time">
-                            <raw>{{{event.date}}}, {{{event.time}}}</raw>
-                          </p>
-                          <p class="event__description">
-                            <raw>{{{event.description}}}</raw>
-                          </p>
+                          <container class="event__container">
+                            <row class="event__row">
+                              <columns class="event__columns">
+                                <h3 class="event__title">
+                                  <raw>{{{event.title}}}</raw>
+                                </h3>
+                                <p class="event__date-and-time">
+                                  <raw>{{{event.date}}}, {{{event.time}}}</raw>
+                                </p>
+                                <p class="event__description">
+                                  <raw>{{{event.description}}}</raw>
+                                </p>
+                              </columns>
+                            </row>
+                          </container>
                         </wrapper>
                         {{/each}}
-                        <spacer size="0"></spacer>
+                        <spacer size="16"></spacer>
                         <center>
                           <button class="events__button secondary radius">
                             Все мероприятия
                           </button>
                         </center>
-                        <spacer size="0"></spacer>
+                        <spacer size-sm="0" size-lg="16"></spacer>
                         <center>
                           <img
                             class="events__image"
@@ -237,12 +244,10 @@ events:
                     </row>
                   </container>
                 </wrapper>
-
-                <spacer size="0"></spacer>
                 {{> footer}}
-                <spacer size="0"></spacer>
-                <hr />
-                <spacer size="0"></spacer>
+                <spacer size-sm="15" size-lg="30"></spacer>
+                <hr class="welcome__divider" />
+                <spacer size-sm="25" size-lg="30"></spacer>
                 {{> alert}}
               </columns>
             </row>
