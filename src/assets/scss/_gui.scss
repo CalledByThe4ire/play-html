@@ -1,21 +1,30 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
 h1 {
-    font-size: $h1-font-size;
-    line-height: 42px;
-  }
+  font-size: $h1-font-size;
+  line-height: 42px;
+}
 
-  h2 {
-    font-size: $h2-font-size;
-    line-height: 35px;
-  }
+h2 {
+  font-size: $h2-font-size;
+  line-height: 35px;
+}
 
-  h3 {
-    font-size: $h3-font-size;
-    line-height: 28px;
-  }
+h3 {
+  font-size: $h3-font-size;
+  line-height: 28px;
+}
 
-  h4,
-  h5,
-  h6 {
-    font-size: $global-font-size;
-    line-height: $global-line-height;
-  }
+h4,
+h5,
+h6 {
+  font-size: $global-font-size;
+  line-height: $global-line-height;
+}

@@ -17,7 +17,7 @@ presenters:
     },
     {
       name: 'Игнатий Чубаров',
-      position: 'Преподаватель IT&nbsp;в&nbsp;РУИТ',
+      position: 'Преподаватель IT&nbsp;в&nbsp;<br>РУИТ',
       image-title: 'i.chubarov',
     },
   ]
@@ -121,13 +121,14 @@ events:
           <container class="content-wrapper__container">
             <row class="content-wrapper__row collapsed">
               <columns class="content-wrapper__columns">
-                <spacer size="0"></spacer>
                 <wrapper class="about">
                   <container class="about__container">
                     <row class="about__row collapsed">
                       <columns class="about__columns">
-                        <h2 class="about__title">Что вас ждет на&nbsp;курсе</h2>
-                        <spacer size="0"></spacer>
+                        <h2 class="about__title text-center">
+                          Что вас ждет на&nbsp;курсе
+                        </h2>
+                        <spacer size="25"></spacer>
                         <p class="about__text">
                           Вы&nbsp;будете изучать теорию и&nbsp;методику
                           на&nbsp;примере учебного проекта, который разработали
@@ -135,7 +136,7 @@ events:
                           на&nbsp;практике вы&nbsp;сможете, выполняя задания
                           по&nbsp;личному проекту.
                         </p>
-                        <spacer size="0"></spacer>
+                        <spacer size="22"></spacer>
                         <p class="about__text">
                           В&nbsp;этом вам будет помогать наставник&nbsp;&mdash;
                           опытный специалист, который проверит домашние задания
@@ -143,13 +144,14 @@ events:
                           у&nbsp;вас останутся вопросы, наставник сможет
                           ответить на&nbsp;них на&nbsp;консультации.
                         </p>
-                        <spacer size="0"></spacer>
+                        <spacer size="22"></spacer>
                         <p class="about__text">
                           После завершения курса вам нужно будет подготовить
                           свой проект к&nbsp;защите&nbsp;&mdash; убедиться, что
                           он&nbsp;реализован в&nbsp;соответствии
                           с&nbsp;техническим заданием.
                         </p>
+                        <spacer size="22"></spacer>
                         <p class="about__text">
                           Желаем вам продуктивной работы на&nbsp;интенсиве
                           и&nbsp;успешной защиты. У&nbsp;вас всё получится,
@@ -160,45 +162,47 @@ events:
                   </container>
                 </wrapper>
 
-                <spacer size="0"></spacer>
                 <wrapper class="presenters">
-                  <h2 class="presenters__title"></h2>
-                  <spacer size="0"></spacer>
+                  <spacer size-sm="35" size-lg="30"></spacer>
+                  <h2 class="presenters__title text-center">Ведущие курса</h2>
+                  <spacer size="25"></spacer>
                   <container class="presenters__container">
                     <row class="presenters__row collapsed">
                       {{#each presenters as | presenter |}}
                       <columns class="presenters__columns" small="12" large="4">
                         <wrapper class="presenters__item presenter">
                           <img
+                            class="presenter__image"
                             src="assets/img/welcome/{{presenter.image-title}}@2x.png"
                             alt="Антон Громов"
                             width="88"
                             height="88"
                           />
-                          <h4 class="presenter__title">{{presenter.name}}</h4>
-                          <p class="presenter__position">
+                          <h4 class="presenter__title text-center">
+                            {{presenter.name}}
+                          </h4>
+                          <p class="presenter__position text-center">
                             <raw>{{{presenter.position}}}</raw>
                           </p>
                         </wrapper>
-                        <spacer size="0"></spacer>
                       </columns>
                       {{/each}}
                     </row>
                   </container>
                 </wrapper>
 
-                <spacer size="0"></spacer>
                 <wrapper class="events">
                   <container class="events__container">
                     <row class="events__row collapsed">
                       <columns class="events__columns">
-                        <p class="events__intro">
+                        <p class="events__intro show-for-large">
                           Пока вы&nbsp;ждёте начала курса, вам могут быть
                           интересны вебинары на&nbsp;разные темы, которые
-                          проходят на&nbsp;платформе ежедневно.
+                          проходят на&nbsp;платформе<br />ежедневно.
                         </p>
-                        <spacer size="0"></spacer>
-                        <h2 class="events__title">Другие мероприятия</h2>
+                        <h2 class="events__title text-center">
+                          Другие мероприятия
+                        </h2>
                         <spacer size="0"></spacer>
                         {{#each events as | event |}}
                         <wrapper class="events__item event">
