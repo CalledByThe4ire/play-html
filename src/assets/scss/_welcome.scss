@@ -3,62 +3,85 @@
 @import 'gui';
 
 .welcome {
-  .menu {
-    &__item {
-      padding: 0 !important;
+  .wrapper-inner {
+    background: none;
+    outline: 1px dashed red;
+  }
 
-      a {
+  &__container {
+    background: $white !important;
+  }
+
+  &__columns {
+    padding-top: $global-padding;
+    padding-bottom: $global-padding * 2 !important;
+  }
+
+  .content-wrapper {
+    &__container {
+      background: none;
+    }
+
+    &__columns {
+      padding: 0;
+    }
+  }
+
+  .header {
+    &__logo {
+      width: 186px !important;
+      height: 32px !important;
+
+      @media #{$media-query} {
+        width: 140px !important;
+        height: 24px !important;
+      }
+    }
+
+    &__menu {
+      .wrapper-inner {
+        text-align: justify;
+
+        @media #{$media-query} {
+          text-align: center;
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      .menu__item {
+        display: inline-block;
+        padding-top: $global-padding / 2;
+        padding-left: $global-padding;
+        padding-bottom: $global-padding / 2;
+        padding-right: $global-padding;
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
-      }
 
-      &:nth-child(1) {
-        a {
+        &:nth-child(1) {
           color: $primary-color;
         }
-      }
 
-      &:nth-child(2) {
-        a {
+        &:nth-child(2) {
           color: $secondary-color;
         }
-      }
 
-      &:nth-child(3) {
-        a {
+        &:nth-child(3) {
           color: $tertiary-color;
         }
-      }
 
-      &:nth-child(4) {
-        a {
+        &:nth-child(4) {
           color: $quaternary-color;
         }
       }
     }
-  }
 
-  .intro {
-    background: $primary-color;
-
-    .container {
-      background: none;
-    }
-
-    .wrapper-inner {
-      padding-top: 30px;
-      padding-right: 25px;
-      padding-bottom: 30px;
-      padding-left: 25px;
-    }
-
-    &__title {
-      color: $tertiary-color;
-    }
-
-    &__text {
-      color: $white;
+    &__columns {
+      padding: 0;
     }
   }
 }
