@@ -1,0 +1,28 @@
+---
+layout: index-layout
+subject: Play HTML
+description: 'Акция на&nbsp;наши курсы'
+---
+
+<wrapper class="promo">
+  <container class="promo__container">
+    <row class="promo__row">
+      <columns class="promo__columns">
+
+        <wrapper class="promo__content-wrapper content-wrapper">
+          <container class="content-wrapper__container">
+            <row class="content-wrapper__row collapsed">
+              <columns class="content-wrapper__columns">
+                {{> footer}}
+                <spacer size-sm="15" size-lg="30"></spacer>
+                <hr class="promo__divider" />
+                <spacer size-sm="25" size-lg="30"></spacer>
+                {{> alert}}
+              </columns>
+            </row>
+          </container>
+        </wrapper>
+      </columns>
+    </row>
+  </container>
+</wrapper>
