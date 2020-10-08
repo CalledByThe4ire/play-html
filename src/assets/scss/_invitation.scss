@@ -3,6 +3,8 @@
 @import 'gui';
 
 .invitation {
+  min-width: $min-width;
+
   .wrapper-inner {
     background: none;
   }

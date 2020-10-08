@@ -6,8 +6,59 @@ description: 'Акция на&nbsp;наши курсы'
 
 <wrapper class="promo">
   <container class="promo__container">
-    <row class="promo__row">
+    <row class="promo__row collapsed">
       <columns class="promo__columns">
+        <wrapper class="promo__header header">
+          <container class="header__container">
+            <row class="header__row collapsed" dir="rtl">
+              <columns class="header__columns" small="12" large="6">
+                <wrapper class="header__socials socials">
+                  <container class="socials__container">
+                    <row class="socials__row collapsed" dir="ltr">
+                      <columns class="socials__columns">
+                        <wrapper class="socials__inner">
+                          <p
+                            class="socials__title small-text-center text-right"
+                          >
+                            Мы в&nbsp;соцсетях:
+                          </p>
+                          <menu class="socials__menu menu-socials">
+                            {{#each footer.socials}}
+                            <item
+                              class="menu-socials__link"
+                              href="#"
+                              target="_blank"
+                              ><img
+                                class="menu-socials__image"
+                                src="assets/img/{{this}}-icon@2x.png"
+                                alt="{{this}}"
+                                width="24"
+                                height="24"
+                            /></item>
+                            {{/each}}
+                          </menu>
+                        </wrapper>
+                      </columns>
+                    </row>
+                  </container>
+                </wrapper>
+              </columns>
+              <columns class="header__columns" small="12" large="6">
+                <wrapper class="header__logo logo float-center">
+                  <a class="logo__link" href="#" target="_blank">
+                    <img
+                      class="logo__image float-center"
+                      src="assets/img/play-html-logo@2x.png"
+                      width="140"
+                      height="24"
+                      alt="логотип компании Play HTML"
+                  /></a>
+                </wrapper>
+              </columns>
+            </row>
+          </container>
+        </wrapper>
+        <spacer size-sm="24" size-lg="36"></spacer>
 
         <wrapper class="promo__content-wrapper content-wrapper">
           <container class="content-wrapper__container">

@@ -1,0 +1,128 @@
+@import 'settings';
+@import 'foundation-emails';
+@import 'gui';
+
+.promo {
+  min-width: $min-width;
+
+  .wrapper-inner {
+    background: none;
+    outline: 1px dashed green;
+  }
+
+  &__container {
+    background: $light-gray !important;
+    outline: 1px dashed red;
+  }
+
+  &__columns {
+    padding-top: $global-padding * 3.25;
+    padding-bottom: $global-padding * 2 !important;
+
+    @media #{$media-query} {
+      padding-top: $global-padding * 1.5;
+    }
+  }
+
+  .content-wrapper {
+    &__container {
+      background: $white;
+    }
+
+    &__columns {
+      padding: 0;
+    }
+  }
+
+  .header {
+    &__container {
+      background: none;
+    }
+
+    &__columns {
+      padding: 0;
+
+      &.last {
+        @media #{$media-query} {
+          padding-top: 25px !important;
+        }
+      }
+    }
+
+    &__logo {
+      .wrapper-inner {
+        padding-left: $global-padding !important;
+
+        @media #{$media-query} {
+          padding-left: 0 !important;
+        }
+      }
+    }
+
+    &__socials {
+      .wrapper-inner {
+        padding: 0;
+      }
+
+      .container {
+        background: none;
+      }
+
+      .columns {
+        padding: 0;
+      }
+
+      .menu {
+        background: none;
+
+        img {
+          max-width: initial;
+        }
+      }
+    }
+
+    .logo {
+      &__image {
+        width: 140px;
+        height: 24px;
+        float: left;
+
+        @media #{$media-query} {
+          width: 140px;
+          height: 24px;
+          float: initial;
+        }
+      }
+    }
+
+    .socials {
+      &__inner {
+        width: inherit;
+        margin: auto;
+        Margin: auto;
+
+        .wrapper-inner {
+          > * {
+            display: inline-block;
+            width: auto !important;
+          }
+        }
+      }
+
+      &__title {
+        font-size: 11px;
+        line-height: 24px;
+        width: 100% !important;
+      }
+    }
+
+    .menu-socials {
+      &__link {
+        padding-top: 0 !important;
+        padding-right: $global-padding / 2 !important;
+        padding-bottom: 0 !important;
+        padding-left: 0 !important;
+      }
+    }
+  }
+}

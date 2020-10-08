@@ -3,6 +3,8 @@
 @import 'gui';
 
 .welcome {
+  min-width: $min-width;
+
   .wrapper-inner {
     background: none;
   }
@@ -196,7 +198,7 @@
   .presenter {
     &__image {
       margin: auto;
-      Margin: auto;
+      margin: auto;
       padding-bottom: 10px;
 
       @media #{$media-query} {
@@ -265,7 +267,7 @@
 
   &__divider {
     margin: 0;
-    Margin: 0;
+    margin: 0;
     color: $dark-gray;
   }
 
