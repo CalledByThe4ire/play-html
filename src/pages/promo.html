@@ -28,6 +28,25 @@ courses:
       { image: 'js', caption: 'JS начальный', price: 20000, discount: 1.25 },
     ],
   ]
+popular-courses: {
+  "cybersecurity": "Специалист по&nbsp;кибербезопасности",
+  "data-analysis": "Профессия Data Scientist: анализ&nbsp;данных",
+  "game-development": "Профессия Разработчик игр на&nbsp;Unity с&nbsp;нуля до&nbsp;Middle",
+}
+advantages: {
+  "smile": {
+    "key-feature": "Более 30&nbsp;курсов",
+    "description": "Как для новичков, так и&nbsp;для практикующих разработчиков."
+    },
+  "clock": {
+    "key-feature": "Только актуальные знания",
+    "description": "Все преподаватели являются практикующими разработчиками, следят за&nbsp;трендами и&nbsp;постоянно обновляют программу курса."
+    },
+  "target": {
+    "key-feature": "База лучших вакансий",
+    "description": "Выпускники получают доступ к&nbsp;базе вакансий от&nbsp;ведущих работодателей."
+  }
+}
 ---
 
 <wrapper class="promo">
@@ -195,6 +214,80 @@ courses:
           </container>
           <spacer size-sm="25" size-lg="40"></spacer>
           <button class="feedback__button radius" href="#">Записаться на&nbsp;курс</button>
+        </wrapper>
+        <spacer size="24"></spacer>
+
+        <wrapper
+          class="promo__content-wrapper content-wrapper popular-courses"
+        >
+
+        <h3 class="popular-courses text-center">Популярные курсы</h3>
+        <spacer size-sm="24" size-lg="48"></spacer>
+          <container class="popular-courses__container">
+            <row class="popular-courses__row collapsed">
+
+                {{#each popular-courses}}
+                <columns class="popular-courses__columns popular-course" small="12" large="4">
+                  <wrapper class="popular-course__inner">
+                  <img
+                  class="popular-course__icon"
+                  src="assets/img/promo/{{@key}}-icon@2x.png"
+                  alt="{{@key}}"
+                  width="48"
+                  height="56"
+                />
+                <p class="popular-course__description text-center">
+                  <raw>{{{this}}}</raw>
+                </p>
+                  </wrapper>
+                  <button class="popular-course__button radius" href="#">Записаться</button>
+                  </columns>
+                {{/each}}
+
+            </row>
+          </container>
+
+          <spacer size-sm="48" size-lg="16"></spacer>
+          <img
+          class="popular-courses__image"
+          src="assets/img/promo/popular-courses-image@2x.png"
+          alt="Декоративное изображение"
+          width="300"
+          height="300"
+        />
+        <button class="popular-courses__button radius" href="#">Все курсы</button>
+        <spacer size="48"></spacer>
+
+        <wrapper class="popular-courses__advantages advantages">
+          <h3 class="popular-courses__title text-center">
+            Преимущества обучения у&nbsp;нас
+          </h3>
+          <spacer size="24"></spacer>
+
+          <container class="advantages__container">
+            {{#each advantages as | advantage |}}
+            <row class="advantages__row">
+              <columns class="advantages__columns">
+                <wrapper class="advantages__item advantage">
+                  <img
+                    class="advantage__icon"
+                    src="assets/img/promo/{{@key}}-icon@2x.png"
+                    alt="Декоративное изображение"
+                    width="40"
+                    height="40"
+                  />
+                  <p class="advantage__text">
+                    <raw><span>{{{advantage.key-feature}}}</span>{{{advantage.description}}}</raw>
+                  </p>
+                </wrapper>
+              </columns>
+            </row>
+              {{#unless @last}}
+              <spacer size="20"></spacer>
+              {{/unless}}
+            {{/each}}
+          </container>
+        </wrapper>
         </wrapper>
         <spacer size="24"></spacer>
 

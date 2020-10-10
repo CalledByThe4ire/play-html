@@ -31,8 +31,12 @@
     .wrapper-inner {
       padding-top: $global-padding * 2;
       padding-right: $global-padding;
-      padding-bottom: $global-padding * 2;
+      padding-bottom: $global-padding * 3;
       padding-left: $global-padding;
+
+      @media #{$media-query} {
+        padding-bottom: $global-padding * 2;
+      }
     }
 
     &--last {
@@ -158,12 +162,7 @@
     .wrapper-inner {
       padding-top: 0;
       padding-right: 0;
-      padding-bottom: $global-padding * 3;
       padding-left: 0;
-
-      @media #{$media-query} {
-        padding-bottom: 0;
-      }
     }
   }
 
@@ -235,33 +234,33 @@
     }
 
     &__row {
-      > tbody > tr > .columns {
-        @media #{$media-query} {
-          padding-bottom: $global-padding * 2;
-        }
-      }
-
-      &:not(:last-of-type) {
+      &:last-of-type {
         > tbody > tr > .columns {
-          padding-bottom: $global-padding * 3;
+          padding-bottom: 0;
+
+          @media #{$media-query} {
+            &.first {
+              padding-bottom: $global-padding * 3;
+            }
+          }
         }
       }
     }
 
     &__column {
       padding: 0;
+      padding-bottom: $global-padding * 3;
     }
 
     .course {
       > tbody > tr > .wrapper-inner {
         padding-left: $global-padding - 2px;
         padding-right: $global-padding - 2px;
+        text-align: center;
       }
 
-      &__image,
-      &__button {
-        margin: auto;
-        margin: auto;
+      &__image {
+        display: inline-block;
       }
 
       &__image {
@@ -281,6 +280,8 @@
       }
 
       &__button {
+        display: inline-block;
+
         table {
           td {
             background: $primary-color !important;
@@ -289,17 +290,13 @@
             border-color: $primary-color;
           }
         }
-
-        @media #{$media-query} {
-          margin: auto;
-          margin: auto;
-        }
       }
     }
 
     .price-course {
-      .wrapper-inner {
+      > tbody > tr > .wrapper-inner {
         padding: 0;
+        text-align: center;
       }
 
       &__container {
@@ -367,6 +364,130 @@
     &__button {
       margin: auto;
       margin: auto;
+    }
+  }
+
+  .popular-courses {
+    > tbody > tr > .wrapper-inner {
+      text-align: center;
+    }
+
+    &__columns {
+      padding: 0 !important;
+    }
+
+    &__button {
+      display: inline-block;
+
+      table {
+        td {
+          background: $primary-color !important;
+        }
+        a {
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .popular-course {
+    @media #{$media-query} {
+      &:not(:last-of-type) {
+        padding-bottom: 40px !important;
+      }
+    }
+
+    > table > tbody > tr > th {
+      text-align: center;
+    }
+
+    &__inner {
+      min-height: 117px;
+
+      > tbody > tr > .wrapper-inner {
+        padding: 0;
+        vertical-align: top;
+        padding-left: $global-padding !important;
+        padding-right: $global-padding !important;
+        text-align: center;
+      }
+    }
+
+    &__icon {
+      display: inline-block;
+      width: 48px;
+      height: 56px;
+      padding-bottom: $global-padding;
+
+      @media #{$media-query} {
+        width: 48px;
+        height: 56px;
+      }
+    }
+
+    &__description {
+      font-size: 13px;
+      line-height: 15px;
+      hyphens: none;
+
+      @media #{$media-query} {
+        max-width: 150px;
+        margin: auto;
+        margin: auto;
+      }
+    }
+
+    &__button {
+      display: inline-block;
+      padding-top: $global-padding;
+    }
+  }
+
+  .advantages {
+    > tbody > tr > .wrapper-inner  {
+      padding: 0;
+    }
+
+    &__container {
+      background: none !important;
+    }
+
+    &__columns {
+      padding: 0;
+    }
+  }
+
+  .advantage {
+    > tbody > tr > .wrapper-inner  {
+      display: inline-table;
+    }
+    &__icon {
+      display: table-cell;
+      width: 40px;
+      max-width: 40px;
+      height: auto;
+
+      @media #{$media-query} {
+        width: 40px !important;
+        height: auto !important;
+      }
+    }
+
+    &__text {
+      display: table-cell;
+      vertical-align: top;
+      padding-left: $global-padding;
+      padding-right: 100px;
+
+      @media #{$media-query} {
+        padding-right: 15px;
+      }
+
+      span {
+        display: table-cell;
+        width: 100%;
+        font-weight: bold;
+      }
     }
   }
 }
