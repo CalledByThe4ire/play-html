@@ -2,6 +2,32 @@
 layout: index-layout
 subject: Play HTML
 description: 'Акция на&nbsp;наши курсы'
+courses:
+  [
+    [
+      {
+        image: 'html-css',
+        caption: 'Html+css начальный',
+        price: 15000,
+        discount: 1.25,
+      },
+      {
+        image: 'sass',
+        caption: 'Html+css продвинутый',
+        price: 20000,
+        discount: 1.25,
+      },
+    ],
+    [
+      {
+        image: 'photoshop',
+        caption: 'Photoshop для&nbsp;верстальщика',
+        price: 15000,
+        discount: 1.25,
+      },
+      { image: 'js', caption: 'JS начальный', price: 20000, discount: 1.25 },
+    ],
+  ]
 ---
 
 <wrapper class="promo">
@@ -60,14 +86,96 @@ description: 'Акция на&nbsp;наши курсы'
         </wrapper>
         <spacer size-sm="24" size-lg="36"></spacer>
 
-        <wrapper class="promo__content-wrapper content-wrapper">
+        <wrapper
+          class="promo__content-wrapper content-wrapper content-wrapper promo__action action"
+        >
+          <container class="content-wrapper__container">
+            <row class="content-wrapper__row collapsed">
+              <columns class="content-wrapper__columns" small="12" large="6">
+                <wrapper class="actiion__coupon coupon">
+                  <h2 class="coupon__title">акция</h2>
+                  <p class="coupon__description">на наши курсы</p>
+                  <p class="coupon__text">скидка</p>
+                  <span class="coupon__discount">20%</span>
+                  <span class="coupon__date">до&nbsp;конца июня</span>
+                </wrapper>
+              </columns>
+              <columns class="content-wrapper__columns" small="12" last="6">
+                <img
+                  class="action__image"
+                  src="assets/img/promo/action-image@2x.png"
+                  alt="Декоративное изображение"
+                  width="284"
+                  height="271"
+                />
+              </columns>
+            </row>
+          </container>
+          <spacer size-sm="20" size-lg="32"></spacer>
+          <wrapper class="action__courses courses">
+            <h3 class="courses__title text-center">
+              Курсы, участвующие в&nbsp;акции
+            </h3>
+            <spacer size="36"></spacer>
+            <container class="courses__container">
+              {{#each courses as | course-row |}}
+
+              <row class="courses__row">
+                {{#each course-row as |course-column| }}
+                <columns class="courses__column" small="12" large="6">
+                  <wrapper class="courses__item course">
+                    <img
+                    class="course__image"
+                      src="assets/img/promo/{{course-column.image}}-logo@2x.png"
+                      alt="Technology logo"
+                      width="116"
+                      height="75"
+                    />
+                    <p class="course__caption text-center"><raw>{{{course-column.caption}}}</raw></p>
+                    <wrapper class="course__price price-course">
+                      <container class="price-course__container">
+                        <row class="price-course__row collapsed">
+                          <columns
+                            class="price-course__column"
+                            small="6"
+                            large="6"
+                            ><strike
+                              ><span>{{formatPrice course-column.price}}&nbsp;руб.</span></strike
+                            ></columns
+                          >
+                          <columns
+                            class="price-course__column"
+                            small="6"
+                            large="6"
+                            ><span>{{formatPrice (getDiscount course-column.price
+                              course-column.discount)}}</span>&nbsp;руб.</columns
+                          >
+                        </row>
+                      </container>
+                      <spacer size="16"></spacer>
+                      <button class="course__button radius" href="#">Записаться на&nbsp;курс<button>
+                    </wrapper>
+                  </wrapper>
+                </columns>
+                {{/each}}
+              </row>
+
+              {{/each}}
+            </container>
+          </wrapper>
+        </wrapper>
+        <spacer size="24"></spacer>
+
+        <wrapper
+          class="promo__content-wrapper content-wrapper content-wrapper--last"
+        >
           <container class="content-wrapper__container">
             <row class="content-wrapper__row collapsed">
               <columns class="content-wrapper__columns">
                 {{> footer}}
-                <spacer size-sm="15" size-lg="30"></spacer>
+                <spacer size-sm="5" size-lg="15"></spacer>
                 <hr class="promo__divider" />
-                <spacer size-sm="25" size-lg="30"></spacer>
+                <spacer size-sm="15" size-lg="25"></spacer>
                 {{> alert}}
               </columns>
             </row>

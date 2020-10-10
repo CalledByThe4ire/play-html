@@ -7,17 +7,17 @@
 
   .wrapper-inner {
     background: none;
-    outline: 1px dashed green;
+    // outline: 1px dashed green;
   }
 
   &__container {
     background: $light-gray !important;
-    outline: 1px dashed red;
+    // outline: 1px dashed red;
   }
 
   &__columns {
     padding-top: $global-padding * 3.25;
-    padding-bottom: $global-padding * 2 !important;
+    padding-bottom: 0 !important;
 
     @media #{$media-query} {
       padding-top: $global-padding * 1.5;
@@ -25,8 +25,36 @@
   }
 
   .content-wrapper {
+    background: $white;
+    border-radius: $global-radius * 3;
+
+    .wrapper-inner {
+      padding-top: $global-padding * 2;
+      padding-right: $global-padding;
+      padding-bottom: $global-padding * 2;
+      padding-left: $global-padding;
+    }
+
+    &--last {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .footer .wrapper-inner,
+      .alert .wrapper-inner {
+        padding: 0 !important;
+      }
+
+      .footer .columns.last {
+        padding-left: $global-padding !important;
+
+        @media #{$media-query} {
+          padding-left: 0 !important;
+        }
+      }
+    }
+
     &__container {
-      background: $white;
+      background: none;
     }
 
     &__columns {
@@ -99,7 +127,7 @@
       &__inner {
         width: inherit;
         margin: auto;
-        Margin: auto;
+        margin: auto;
 
         .wrapper-inner {
           > * {
@@ -122,6 +150,186 @@
         padding-right: $global-padding / 2 !important;
         padding-bottom: 0 !important;
         padding-left: 0 !important;
+      }
+    }
+  }
+
+  .action {
+    .wrapper-inner {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: $global-padding * 3;
+      padding-left: 0;
+
+      @media #{$media-query} {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .coupon {
+    background-color: $secondary-color;
+    border-top-left-radius: $global-radius * 3;
+
+    @media #{$media-query} {
+      border-top-right-radius: $global-radius * 3;
+    }
+
+    &__title {
+      display: inline-block;
+      width: 100%;
+      font-size: 36px;
+      line-height: 42px;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    &__description,
+    &__text {
+      display: inline-block;
+      width: 100%;
+      font-size: 28px;
+      line-height: 33px;
+      color: $white;
+    }
+
+    &__description {
+      padding-bottom: $global-padding * 1.5;
+    }
+
+    &__text {
+      padding-bottom: $global-padding / 2;
+    }
+
+    &__discount {
+      display: inline-block;
+      font-family: Tahoma, Arial, Helvetica, sans-serif;
+      font-size: 56px;
+      line-height: 68px;
+      font-weight: bold;
+      color: $white;
+    }
+
+    &__date {
+      display: inline-block;
+      width: 35%;
+      font-size: 18px;
+      line-height: 21px;
+      color: $white;
+    }
+
+    .wrapper-inner {
+      padding: $global-padding * 2;
+      padding-right: $global-padding * 1.5;
+    }
+  }
+
+  .courses {
+    .wrapper-inner {
+      padding-bottom: 0;
+    }
+
+    &__container {
+      background: none;
+      padding: 0;
+    }
+
+    &__row {
+      > tbody > tr > .columns {
+        @media #{$media-query} {
+          padding-bottom: $global-padding * 3;
+        }
+      }
+
+      &:not(:last-of-type) {
+        > tbody > tr > .columns {
+          padding-bottom: $global-padding * 3;
+        }
+      }
+    }
+
+    &__column {
+      padding: 0;
+    }
+
+    .course {
+      > tbody > tr > .wrapper-inner {
+        padding-left: $global-padding - 2px;
+        padding-right: $global-padding - 2px;
+      }
+
+      &__image,
+      &__button {
+        margin: auto;
+        margin: auto;
+      }
+
+      &__image {
+        padding-bottom: $global-padding * 2;
+        width: 116px;
+        height: 75px;
+
+        @media #{$media-query} {
+          width: 116px;
+          height: 75px;
+        }
+      }
+
+      &__caption {
+        font-weight: bold;
+        padding-bottom: $global-padding;
+      }
+
+      &__button {
+        table {
+          td {
+            background: $primary-color !important;
+          }
+          a {
+            border-color: $primary-color;
+          }
+        }
+
+        @media #{$media-query} {
+          margin: auto;
+          margin: auto;
+        }
+      }
+    }
+
+    .price-course {
+      .wrapper-inner {
+        padding: 0;
+      }
+
+      &__container {
+        background: none;
+        padding: 0;
+      }
+
+      &__column {
+        padding: 0;
+
+        &.columns.first {
+          padding-left: $global-padding !important;
+
+          th {
+            color: $dark-gray;
+            text-align: left;
+          }
+        }
+
+        &.columns.last {
+          padding-right: $global-padding !important;
+
+          span {
+            color: $secondary-color;
+          }
+
+          th {
+            text-align: right;
+          }
+        }
       }
     }
   }
