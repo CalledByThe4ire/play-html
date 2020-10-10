@@ -237,7 +237,7 @@
     &__row {
       > tbody > tr > .columns {
         @media #{$media-query} {
-          padding-bottom: $global-padding * 3;
+          padding-bottom: $global-padding * 2;
         }
       }
 
@@ -331,6 +331,42 @@
           }
         }
       }
+    }
+  }
+
+  .feedback {
+    &__columns {
+      padding: 0;
+
+      &.first {
+        @media #{$media-query} {
+          padding-bottom: $global-padding * 1.5;
+        }
+      }
+
+      &.last {
+        padding-left: 10px;
+      }
+    }
+
+    &__image {
+      margin: auto;
+      margin: auto;
+      width: 120px;
+      height: 120px;
+
+      @media #{$media-query} {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    &__lead {
+      color: $tertiary-color;
+    }
+
+    &__button {
+      margin: auto;
+      margin: auto;
     }
   }
 }
