@@ -170,14 +170,6 @@
     &__columns {
       padding: 0;
 
-      &:not(:last-of-type) {
-        padding-bottom: 50px !important;
-
-        @media #{$media-query} {
-          padding-bottom: 35px !important;
-        }
-      }
-
       &.columns.first,
       &.columns.last {
         padding-left: $global-padding !important;
@@ -220,12 +212,6 @@
 
     &__title {
       color: $primary-color;
-    }
-
-    &__item {
-      .wrapper-inner {
-        padding-bottom: $global-padding !important;
-      }
     }
 
     &__button {

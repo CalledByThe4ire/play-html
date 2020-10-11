@@ -17,7 +17,7 @@ details: {
           <container class="alert__container">
             <row class="alert__row">
               <columns class="alert__columns">
-                <spacer size="9"></spacer>
+                <spacer size="8"></spacer>
                 <p class="alert__text text-center">
                   Если вы не&nbsp;видите данное&nbsp;письмо, перейдите
                   по&nbsp;<a class="alert__link" href="#" target="_blank"
@@ -38,7 +38,7 @@ details: {
                     <row class="header__row collapsed">
                       <columns class="header__columns">
                         <spacer size="32"></spacer>
-                        <center>
+                        <center class="header__centering">
                           <img
                             class="header__logo"
                             src="assets/img/play-html-logo@2x.png"
@@ -65,7 +65,7 @@ details: {
                           <p class="date__month text-center">июнь</p>
                           <p class="date__day text-center">20</p>
                           <p class="date__time text-center">17:00</p>
-                          <spacer size="14"></spacer>
+                          <spacer size="16"></spacer>
                           <button href="#" class="date__button radius">
                             На&nbsp;вебинар
                           </button>
@@ -79,7 +79,7 @@ details: {
                           height="286"
                           alt="Декоративное изображение"
                         />
-                        <spacer size="30"></spacer>
+                        <spacer size="32"></spacer>
                       </columns>
                     </row>
                   </container>
@@ -96,7 +96,7 @@ details: {
                           вопросы&nbsp;Вы сможете задать спикеру
                           на&nbsp;вебинаре&nbsp;:)
                         </p>
-                        <spacer size-sm="25" size-lg="32"></spacer>
+                        <spacer size-sm="24" size-lg="32"></spacer>
                         <h2 class="details__title">План вебинара:</h2>
                         <spacer size="16"></spacer>
                         <wrapper class="details__list list-details">
@@ -106,7 +106,7 @@ details: {
                               <columns class="list-details__columns">
                                 <wrapper>
                                   <img
-                                    class="list-details__image"
+                                    class="list-details__icon"
                                     src="assets/img/{{@key}}-icon@2x.png"
                                     alt="{{@key}}"
                                     width="12"
@@ -135,8 +135,8 @@ details: {
                         <h3 class="presenter__title text-center">
                           Ведущий вебинара
                         </h3>
-                        <spacer size="25"></spacer>
-                        <center>
+                        <spacer size="24"></spacer>
+                        <center class="presenter__centering">
                           <img
                             class="presenter__image"
                             src="assets/img/invitation/presenter-userpic@2x.png"
@@ -153,8 +153,8 @@ details: {
                           Frontend-разработчик
                           компании&nbsp;Cats&nbsp;Development
                         </p>
-                        <spacer size-sm="18" size-lg="25"></spacer>
-                        <center>
+                        <spacer size-sm="16" size-lg="24"></spacer>
+                        <center class="presenter__centering">
                           <button
                             class="presenter__button secondary radius"
                             href="#"
@@ -169,12 +169,12 @@ details: {
                   </container>
                 </wrapper>
 
-                <spacer size="15"></spacer>
+                <spacer size="16"></spacer>
                 <wrapper class="invitation__promo promo">
                   <container class="promo__container">
                     <row class="promo__row">
                       <columns class="promo__columns">
-                        <center>
+                        <center class="promo__centering">
                           <img
                             class="promo__image"
                             src="assets/img/invitation/promo-image@2x.png"
@@ -183,13 +183,13 @@ details: {
                             height="278"
                           />
                         </center>
-                        <spacer size-sm="35" size-lg="15"></spacer>
+                        <spacer size-sm="0" size-lg="16"></spacer>
                         <h2 class="promo__title text-center">
                           Среди участников вебинара будут разыграны ценные
                           призы!
                         </h2>
-                        <spacer size="25"></spacer>
-                        <center>
+                        <spacer size="24"></spacer>
+                        <center class="promo__centering">
                           <button
                             class="promo__button secondary radius"
                             href="#"
@@ -206,9 +206,9 @@ details: {
                   </container>
                 </wrapper>
 
-                <spacer size="30"></spacer>
+                <spacer size="48"></spacer>
                 {{> footer}}
-                <spacer size-sm="25" size-lg="30"></spacer>
+                <spacer size-sm="24" size-lg="32"></spacer>
               </columns>
             </row>
           </container>

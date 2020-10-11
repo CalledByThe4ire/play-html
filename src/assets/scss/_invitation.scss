@@ -34,6 +34,10 @@
         color: $tertiary-color;
       }
     }
+
+    &__container {
+      background: none;
+    }
   }
 
   .header {
@@ -84,6 +88,11 @@
         line-height: 21px;
       }
     }
+
+    &__centering {
+      width: auto;
+      min-width: auto;
+    }
   }
 
   .date {
@@ -95,6 +104,7 @@
       padding-left: 35px;
       padding-bottom: 25px;
       padding-right: 35px;
+      text-align: center;
     }
 
     &__container {
@@ -120,6 +130,7 @@
     }
 
     &__button {
+      display: inline-block;
       table {
         td {
           background: $quaternary-color !important;
@@ -127,11 +138,6 @@
         a {
           border-color: $quaternary-color;
         }
-      }
-
-      @media #{$media-query} {
-        margin: auto;
-        Margin: auto;
       }
     }
   }
@@ -172,7 +178,7 @@
       padding: 0;
     }
 
-    &__image {
+    &__icon {
       display: table-cell;
       width: 12px;
       height: auto;
@@ -231,16 +237,25 @@
         max-width: 205px;
       }
     }
+
+    &__centering {
+      width: auto;
+      min-width: auto;
+    }
   }
 
   .promo {
-    .container {
-      background: $white;
-    }
-
     .wrapper-inner {
       padding-left: $global-padding;
       padding-right: $global-padding;
+    }
+
+    &__container {
+      background: $white !important;
+    }
+
+    &__columns {
+      padding: 0;
     }
 
     &__title {
@@ -250,6 +265,11 @@
         font-size: 24px;
         line-height: 28px;
       }
+    }
+
+    &__centering {
+      width: auto;
+      min-width: auto;
     }
   }
 }

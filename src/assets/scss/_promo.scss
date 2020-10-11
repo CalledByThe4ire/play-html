@@ -7,12 +7,10 @@
 
   .wrapper-inner {
     background: none;
-    // outline: 1px dashed green;
   }
 
   &__container {
     background: $light-gray !important;
-    // outline: 1px dashed red;
   }
 
   &__columns {
@@ -237,19 +235,12 @@
       &:last-of-type {
         > tbody > tr > .columns {
           padding-bottom: 0;
-
-          @media #{$media-query} {
-            &.first {
-              padding-bottom: $global-padding * 3;
-            }
-          }
         }
       }
     }
 
     &__column {
       padding: 0;
-      padding-bottom: $global-padding * 3;
     }
 
     .course {
@@ -332,12 +323,20 @@
   }
 
   .feedback {
+    > tbody > tr > .wrapper-inner {
+      text-align: center;
+    }
+
     &__columns {
       padding: 0;
 
       &.first {
         @media #{$media-query} {
           padding-bottom: $global-padding * 1.5;
+
+          th {
+            text-align: center;
+          }
         }
       }
 
@@ -346,9 +345,12 @@
       }
     }
 
+    &__image,
+    &__button {
+      display: inline-block;
+    }
+
     &__image {
-      margin: auto;
-      margin: auto;
       width: 120px;
       height: 120px;
 
@@ -360,31 +362,34 @@
     &__lead {
       color: $tertiary-color;
     }
-
-    &__button {
-      margin: auto;
-      margin: auto;
-    }
   }
 
-  .popular-courses {
-    > tbody > tr > .wrapper-inner {
-      text-align: center;
+  .education {
+    .popular-courses,
+    .advantages {
+      > tbody > tr > .wrapper-inner {
+        padding: 0;
+      }
     }
 
-    &__columns {
-      padding: 0 !important;
-    }
+    .popular-courses {
+      &__centering {
+        width: auto;
+        min-width: auto;
+      }
 
-    &__button {
-      display: inline-block;
+      &__columns {
+        padding: 0 !important;
+      }
 
-      table {
-        td {
-          background: $primary-color !important;
-        }
-        a {
-          border-color: $primary-color;
+      &__button {
+        table {
+          td {
+            background: $primary-color !important;
+          }
+          a {
+            border-color: $primary-color;
+          }
         }
       }
     }
@@ -444,7 +449,7 @@
   }
 
   .advantages {
-    > tbody > tr > .wrapper-inner  {
+    > tbody > tr > .wrapper-inner {
       padding: 0;
     }
 
@@ -458,7 +463,7 @@
   }
 
   .advantage {
-    > tbody > tr > .wrapper-inner  {
+    > tbody > tr > .wrapper-inner {
       display: inline-table;
     }
     &__icon {

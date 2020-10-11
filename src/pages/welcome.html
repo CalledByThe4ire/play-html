@@ -52,7 +52,7 @@ events:
           <container class="content-wrapper__container">
             <row class="content-wrapper__row collapsed">
               <columns class="content-wrapper__columns">
-                <spacer size-sm="25" size-lg="40"></spacer>
+                <spacer size-sm="24" size-lg="40"></spacer>
                 <wrapper class="welcome__header header">
                   <container class="header__container">
                     <row class="header__row collapsed">
@@ -66,7 +66,7 @@ events:
                             alt="логотип компании Play HTML"
                           />
                         </center>
-                        <spacer size-sm="22" size-lg="40"></spacer>
+                        <spacer size-sm="24" size-lg="40"></spacer>
                         <wrapper class="header__menu">
                           {{#each main-menu-list}}
                           <a class="menu__item" href="#" target="_blank"
@@ -91,19 +91,19 @@ events:
                   Здравствуйте,
                   <span>&#123;&#123;name&#125;&#125;</span>
                 </h4>
-                <spacer size="25"></spacer>
+                <spacer size="24"></spacer>
                 <p class="intro__text">
                   Благодарим вас за&nbsp;регистрацию на&nbsp;курс
                   &laquo;Начальный html+css&raquo;.
                 </p>
-                <spacer size="22"></spacer>
+                <spacer size="24"></spacer>
                 <p class="intro__text">
                   Курс стартует 1&nbsp;июля в&nbsp;17.00 по&nbsp;московскому
                   времени. Письма со&nbsp;ссылками для входа в&nbsp;кабинет
                   придут на&nbsp;указанную почту за&nbsp;день до&nbsp;старта
                   курса.
                 </p>
-                <spacer size-sm="20" size-lg="0"></spacer>
+                <spacer size-sm="24" size-lg="0"></spacer>
               </columns>
               <columns class="intro__columns" small="12" large="4">
                 <img
@@ -128,7 +128,7 @@ events:
                         <h2 class="about__title text-center">
                           Что вас ждет на&nbsp;курсе
                         </h2>
-                        <spacer size="25"></spacer>
+                        <spacer size="24"></spacer>
                         <p class="about__text">
                           Вы&nbsp;будете изучать теорию и&nbsp;методику
                           на&nbsp;примере учебного проекта, который разработали
@@ -136,7 +136,7 @@ events:
                           на&nbsp;практике вы&nbsp;сможете, выполняя задания
                           по&nbsp;личному проекту.
                         </p>
-                        <spacer size="22"></spacer>
+                        <spacer size="24"></spacer>
                         <p class="about__text">
                           В&nbsp;этом вам будет помогать наставник&nbsp;&mdash;
                           опытный специалист, который проверит домашние задания
@@ -144,14 +144,14 @@ events:
                           у&nbsp;вас останутся вопросы, наставник сможет
                           ответить на&nbsp;них на&nbsp;консультации.
                         </p>
-                        <spacer size="22"></spacer>
+                        <spacer size="24"></spacer>
                         <p class="about__text">
                           После завершения курса вам нужно будет подготовить
                           свой проект к&nbsp;защите&nbsp;&mdash; убедиться, что
                           он&nbsp;реализован в&nbsp;соответствии
                           с&nbsp;техническим заданием.
                         </p>
-                        <spacer size="22"></spacer>
+                        <spacer size="24"></spacer>
                         <p class="about__text">
                           Желаем вам продуктивной работы на&nbsp;интенсиве
                           и&nbsp;успешной защиты. У&nbsp;вас всё получится,
@@ -163,9 +163,9 @@ events:
                 </wrapper>
 
                 <wrapper class="presenters">
-                  <spacer size-sm="35" size-lg="30"></spacer>
+                  <spacer size="32"></spacer>
                   <h2 class="presenters__title text-center">Ведущие курса</h2>
-                  <spacer size="25"></spacer>
+                  <spacer size="24"></spacer>
                   <container class="presenters__container">
                     <row class="presenters__row collapsed">
                       {{#each presenters as | presenter |}}
@@ -185,6 +185,9 @@ events:
                             <raw>{{{presenter.position}}}</raw>
                           </p>
                         </wrapper>
+                        {{#unless @last}}
+                          <spacer size-sm="32" size-lg="24"></spacer>
+                        {{/unless}}
                       </columns>
                       {{/each}}
                     </row>
@@ -200,11 +203,11 @@ events:
                           интересны вебинары на&nbsp;разные темы, которые
                           проходят на&nbsp;платформе<br />ежедневно.
                         </p>
-                        <spacer size-sm="45" size-lg="25"></spacer>
+                        <spacer size="48"></spacer>
                         <h2 class="events__title text-center">
                           Другие мероприятия
                         </h2>
-                        <spacer size-sm="16" size-lg="25"></spacer>
+                        <spacer size-sm="16" size-lg="24"></spacer>
                         {{#each events as | event |}}
                         <wrapper class="events__item event">
                           <container class="event__container">
@@ -223,8 +226,11 @@ events:
                             </row>
                           </container>
                         </wrapper>
+                        {{#unless @last}}
+                          <spacer size="16"></spacer>
+                        {{/unless}}
                         {{/each}}
-                        <spacer size="16"></spacer>
+                        <spacer size="32"></spacer>
                         <center>
                           <button class="events__button secondary radius">
                             Все мероприятия
@@ -245,9 +251,9 @@ events:
                   </container>
                 </wrapper>
                 {{> footer}}
-                <spacer size-sm="15" size-lg="30"></spacer>
+                <spacer size-sm="16" size-lg="32"></spacer>
                 <hr class="welcome__divider" />
-                <spacer size-sm="25" size-lg="30"></spacer>
+                <spacer size-sm="24" size-lg="32"></spacer>
                 {{> alert}}
               </columns>
             </row>
