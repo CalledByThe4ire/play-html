@@ -1,0 +1,212 @@
+@import 'settings';
+@import 'foundation-emails';
+
+.invitation {
+  &__wrapper {
+    &.columns {
+      padding: 0 !important;
+    }
+
+    .wrapper-inner {
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+
+  &__main-content {
+    background: $white;
+  }
+
+  &.container {
+    background: transparent;
+    outline: 1px dashed red;
+  }
+}
+
+.intro-invitation {
+  &__heading,
+  &__subtitle {
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+
+  &__heading {
+    color: $primary-color;
+
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      font-size: 28px;
+    }
+  }
+
+  &__subtitle {
+    padding-left: 50px;
+    padding-right: 50px;
+    color: $secondary-color;
+    line-height: 1.2;
+
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 18px;
+    }
+  }
+
+  &__image {
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      width: 140px !important;
+    }
+  }
+}
+
+.webinar-registration {
+  .date-time {
+    &__month,
+    &__time,
+    &__day {
+      line-height: 1;
+    }
+
+    &__month,
+    &__time {
+      font-size: 36px;
+    }
+
+    &__day {
+      font-size: 96px;
+    }
+  }
+
+  &__wrapper {
+    margin-left: 8px !important;
+    margin-bottom: 0 !important;
+
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      margin-left: auto !important;
+    }
+
+    > tbody > tr > td > table > tbody > tr > td {
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-left: 20px;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding-bottom: 20px;
+      }
+    }
+
+    table {
+      td {
+        background: $secondary-color !important;
+      }
+
+      a {
+        border: 0 solid $secondary-color !important;
+        cursor: auto;
+      }
+    }
+  }
+
+  &__inner {
+    .columns {
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+
+  &__button {
+    margin-bottom: 0 !important;
+
+    table {
+      td {
+        padding-left: 10px;
+        padding-right: 10px;
+        background: #ffb500 !important;
+        cursor: pointer;
+      }
+
+      a {
+        border: 0 solid #ffb500 !important;
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        width: auto !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &:hover {
+      table {
+        td {
+          background: lighten($color: #ffb500, $amount: 10%) !important;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        a {
+          border: 0 solid lighten($color: #ffb500, $amount: 10%) !important;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    > tbody > tr > td {
+      border-radius: 0 !important;
+    }
+  }
+}
+
+.info {
+  $info: &;
+
+  font-size: 11px;
+  line-height: 13px;
+  margin-bottom: 0;
+
+  &--intro {
+    color: #141414;
+
+    #{$info}__link {
+      color: $tertiary-color;
+      transition: all 0.3s ease-out;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken($tertiary-color, 10%);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &--outro {
+    color: $medium-gray;
+
+    #{$info}__link {
+      color: $medium-gray;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken($medium-gray, 10%);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
