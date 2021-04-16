@@ -1,5 +1,5 @@
-@import 'settings';
-@import 'foundation-emails';
+@import "settings";
+@import "foundation-emails";
 
 .invitation {
   &__wrapper {
@@ -8,9 +8,11 @@
     }
 
     .wrapper-inner {
+      transition: all 0.3s ease-in-out;
+
       @media only screen and (max-width: #{$global-breakpoint}) {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: $global-padding;
+        padding-right: $global-padding;
       }
     }
   }
@@ -30,6 +32,7 @@
   &__subtitle {
     margin-bottom: 0;
     font-weight: 700;
+    transition: all 0.3s ease-in-out;
   }
 
   &__heading {
@@ -41,8 +44,8 @@
   }
 
   &__subtitle {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: $global-padding * 3;
+    padding-right: $global-padding * 3;
     color: $secondary-color;
     line-height: 1.2;
 
@@ -61,58 +64,41 @@
 }
 
 .webinar-registration {
+  .callout {
+    margin-left: $global-margin / 2 !important;
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      margin-left: auto !important;
+    }
+  }
+
+  &__wrapper {
+    padding: $global-padding $global-padding * 2 $global-padding * 2 !important;
+    background-color: $secondary-color !important;
+    border: none !important;
+    border-radius: $global-radius;
+
+    > center {
+      min-width: auto !important;
+    }
+  }
   .date-time {
     &__month,
     &__time,
     &__day {
+      color: $white;
       line-height: 1;
     }
 
     &__month,
     &__time {
-      font-size: 36px;
+      font-size: $h1-font-size;
     }
 
     &__day {
       font-size: 96px;
-    }
-  }
-
-  &__wrapper {
-    margin-left: 8px !important;
-    margin-bottom: 0 !important;
-
-    @media only screen and (max-width: #{$global-breakpoint}) {
-      margin-left: auto !important;
-    }
-
-    > tbody > tr > td > table > tbody > tr > td {
-      padding-top: 10px;
-      padding-right: 20px;
-      padding-left: 20px;
-
-      @media only screen and (max-width: #{$global-breakpoint}) {
-        padding-bottom: 20px;
-      }
-    }
-
-    table {
-      td {
-        background: $secondary-color !important;
-      }
-
-      a {
-        border: 0 solid $secondary-color !important;
-        cursor: auto;
-      }
-    }
-  }
-
-  &__inner {
-    .columns {
-      @media only screen and (max-width: #{$global-breakpoint}) {
-        padding-bottom: 0 !important;
-      }
     }
   }
 
@@ -121,47 +107,16 @@
 
     table {
       td {
-        padding-left: 10px;
-        padding-right: 10px;
         background: #ffb500 !important;
-        cursor: pointer;
+
+        &:hover {
+          background: lighten($color: #ffb500, $amount: 10%) !important;
+        }
       }
 
       a {
         border: 0 solid #ffb500 !important;
-        cursor: pointer;
       }
-
-      @media only screen and (max-width: #{$global-breakpoint}) {
-        width: auto !important;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    &:hover {
-      table {
-        td {
-          background: lighten($color: #ffb500, $amount: 10%) !important;
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-
-        a {
-          border: 0 solid lighten($color: #ffb500, $amount: 10%) !important;
-        }
-      }
-    }
-  }
-
-  &__image {
-    width: 100%;
-    height: auto;
-  }
-
-  .container {
-    > tbody > tr > td {
-      border-radius: 0 !important;
     }
   }
 }
