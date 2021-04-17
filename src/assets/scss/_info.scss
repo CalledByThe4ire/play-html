@@ -1,0 +1,44 @@
+.info {
+  $info: &;
+
+  font-size: 11px;
+  line-height: 13px;
+  margin-bottom: 0;
+
+  &--intro {
+    color: #141414;
+
+    #{$info}__link {
+      color: $tertiary-color;
+      transition: all 0.3s ease-out;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken($tertiary-color, 10%);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &--outro {
+    color: $medium-gray;
+
+    #{$info}__link {
+      color: $medium-gray;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken($medium-gray, 10%);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+.invitation {
+  &.container {
+    background: transparent;
+  }
+  &__wrapper {
+    &.columns {
+      padding: 0 !important;
+    }
+
+    .wrapper-inner {
+      transition: all 0.3s ease-in-out;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding-left: $global-padding;
+        padding-right: $global-padding;
+      }
+    }
+  }
+
+  &__main-content {
+    background: $white;
+  }
+
+  &.container {
+    background: transparent;
+    @include debug($color: #ff0000);
+  }
+
+  .header {
+    &__logo {
+      display: inline-block;
+
+      img {
+        @media only screen and (max-width: #{$global-breakpoint}) {
+          width: 140px !important;
+        }
+      }
+    }
+  }
+
+  .intro {
+    &__heading,
+    &__subtitle {
+      margin-bottom: 0;
+      font-weight: 700;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__heading {
+      color: $primary-color;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        font-size: 28px;
+      }
+    }
+
+    &__subtitle {
+      padding-left: $global-padding * 3;
+      padding-right: $global-padding * 3;
+      color: $secondary-color;
+      line-height: 1.2;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .webinar-registration {
+    .callout {
+      margin-left: $global-margin / 2 !important;
+      margin-bottom: 0;
+      transition: all 0.3s ease-in-out;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        margin-left: auto !important;
+      }
+    }
+
+    &__wrapper {
+      padding: $global-padding 30px 30px !important;
+      background-color: $secondary-color !important;
+      border: none !important;
+      border-radius: $global-radius;
+
+      > center {
+        min-width: auto !important;
+      }
+    }
+    .date-time {
+      &__month,
+      &__time,
+      &__day {
+        color: $white;
+        line-height: 1;
+      }
+
+      &__month,
+      &__time {
+        font-size: $h1-font-size;
+      }
+
+      &__day {
+        font-size: 96px;
+      }
+    }
+
+    &__button {
+      margin-bottom: 0 !important;
+
+      table {
+        td {
+          background: #ffb500 !important;
+
+          &:hover {
+            background: lighten($color: #ffb500, $amount: 10%) !important;
+          }
+        }
+
+        a {
+          border: 0 solid #ffb500 !important;
+        }
+      }
+    }
+  }
+
+  .details {
+    .callout {
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      margin-left: -$global-margin;
+      margin-right: -$global-margin;
+      width: auto;
+    }
+
+    &__wrapper {
+      padding: 40px $global-padding 30px !important;
+      background-color: $primary-color !important;
+      border: none !important;
+      transition: all 0.3s ease-in-out;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding: 24px $global-padding 4px !important;
+      }
+    }
+
+    &__intro,
+    &__heading {
+      color: $white;
+      margin-bottom: 0;
+    }
+
+    &__intro {
+      line-height: 1.2;
+    }
+
+    .list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+      text-align: left;
+
+      .item-list {
+        display: inline-block;
+
+        &__image,
+        &__text {
+          display: inline-block;
+        }
+
+        &__image {
+          width: 12px;
+          height: 12px;
+          margin-top: 4px;
+          margin-right: 13px;
+          vertical-align: top;
+          transition: all 0.3s ease-in-out;
+
+          @media only screen and (max-width: #{$global-breakpoint}) {
+            margin-right: 20px;
+          }
+        }
+
+        &__text {
+          max-width: calc(100% - 25px);
+          color: $white;
+          transition: all 0.3s ease-in-out;
+
+          @media only screen and (max-width: #{$global-breakpoint}) {
+            max-width: calc(100% - 32px);
+          }
+
+          @media only screen and (max-width: #{$global-breakpoint}) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

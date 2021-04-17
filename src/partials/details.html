@@ -1,0 +1,24 @@
+<callout  class="details__wrapper">
+  <p class="details__intro">
+    Мы&nbsp;расскажем все детали о&nbsp;том, с&nbsp;чего начать свой путь
+    в&nbsp;разработке сайтов, и&nbsp;как вырасти в&nbsp;востребованного
+    специалиста. Все вопросы&nbsp;Вы сможете задать спикеру на&nbsp;вебинаре :)
+  </p>
+  <spacer size-sm="24" size-lg="32"></spacer>
+  <h2 class="details__heading">План вебинара:</h2>
+  <spacer size="16"></spacer>
+  <ul class="details__list list">
+    {{#each details as | detail |}}
+    <li class="list__item item-list">
+      <img
+        src="{{root}}assets/img/invitation/details_{{image-modifier}}@2x.png"
+        alt="{{image-modifier}} symbol"
+        width="12"
+        height="12"
+        class="item-list__image"
+      />
+      <p class="item-list__text">{{text}}</p>
+    </li>
+    {{/each}}
+  </ul>
+</callout>
