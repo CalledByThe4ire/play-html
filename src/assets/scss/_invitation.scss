@@ -233,4 +233,35 @@
       }
     }
   }
+
+  .features {
+    &__heading {
+      margin-bottom: 0;
+      font-weight: 700;
+      color: $tertiary-color;
+      transition: all 0.3s ease-in-out;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        font-size: 24px;
+      }
+    }
+
+    &__button {
+      margin: 0;
+
+      > tbody > tr > td {
+        padding: 0 16px;
+      }
+
+      table td {
+        padding: 8px 16px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    &__note {
+      margin-bottom: 0;
+    }
+  }
 }
