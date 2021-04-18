@@ -108,7 +108,7 @@
     }
 
     &__button {
-      margin-bottom: 0 !important;
+      margin-bottom: 0;
 
       table {
         td {
@@ -199,6 +199,37 @@
             margin-bottom: 20px;
           }
         }
+      }
+    }
+  }
+
+  .presenter {
+    &__heading {
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    &__image {
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        width: 88px !important;
+      }
+    }
+
+    &__about {
+      margin-bottom: 0;
+    }
+
+    &__button {
+      margin: 0;
+
+      > tbody > tr > td {
+        padding: 0 16px;
+      }
+
+      table td {
+        padding: 8px 16px;
+        text-align: center;
+        cursor: pointer;
       }
     }
   }
