@@ -25,7 +25,9 @@
   }
 
   &--outro {
+    margin-bottom: $global-margin;
     color: $medium-gray;
+    text-align: justify;
 
     #{$info}__link {
       color: $medium-gray;

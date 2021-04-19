@@ -23,7 +23,6 @@
 
   &.container {
     background: transparent;
-    @include debug($color: #ff0000);
   }
 
   .header {
@@ -262,6 +261,88 @@
 
     &__note {
       margin-bottom: 0;
+    }
+  }
+
+  .footer {
+    &__columns {
+      padding-bottom: 0;
+
+      &.first {
+        padding-right: $global-padding;
+      }
+
+      &.last {
+        padding-left: $global-padding;
+      }
+    }
+
+    > tbody > tr > td {
+      padding: 0 $global-padding;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding: 0;
+      }
+    }
+
+    .socials {
+      &__heading {
+        margin-bottom: 0;
+      }
+
+      .menu-socials {
+        width: auto;
+
+        &__item {
+          padding: 0;
+          padding-right: $global-padding / 2;
+        }
+
+        &__image {
+          @media only screen and (max-width: #{$global-breakpoint}) {
+            width: 24px;
+          }
+        }
+      }
+    }
+
+    .contacts {
+      &__heading {
+        margin-bottom: 0;
+      }
+
+      .menu-contacts {
+        &__item {
+          padding: 0;
+          padding-bottom: $global-padding / 2;
+          text-align: left;
+          a {
+            text-decoration: none;
+            color: $tertiary-color;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+
+    .links {
+      &__heading {
+        margin-bottom: 0;
+      }
+
+      .menu-links {
+        &__item {
+          padding: 0;
+          padding-bottom: $global-padding / 2;
+          text-align: left;
+          a {
+            color: $black;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
     }
   }
 }
