@@ -49,13 +49,17 @@ contacts:
       <spacer size="16"></spacer>
 
       <wrapper class="invitation__main-content main-content">
-        <center class="invitation__header header">{{> header}}</center>
+        <container class="invitation__header header">{{> header}}</container>
         <spacer size="10"></spacer>
         <center class="invitation__details details">{{> details}}</center>
         <spacer size="40"></spacer>
-        <center class="invitation__presenter presenter">{{> presenter}}</center>
+        <container class="invitation__presenter presenter"
+          >{{> presenter}}</container
+        >
         <spacer size-sm="20" size-lg="16"></spacer>
-        <center class="invitation__features features">{{> features}}</center>
+        <container class="invitation__features features"
+          >{{> features}}</container
+        >
         <spacer size="48"></spacer>
         <container class="invitation__footer footer">{{> footer}}</container>
       </wrapper>

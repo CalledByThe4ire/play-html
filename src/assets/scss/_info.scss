@@ -1,9 +1,10 @@
 .info {
   $info: &;
 
+  padding: 0 $global-padding !important;
+  margin-bottom: 0;
   font-size: 11px;
   line-height: 13px;
-  margin-bottom: 0;
 
   &--intro {
     color: #141414;
