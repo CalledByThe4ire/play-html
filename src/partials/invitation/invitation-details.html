@@ -8,7 +8,7 @@
   <h2 class="details__heading">План вебинара:</h2>
   <spacer size="16"></spacer>
   <ul class="details__list list">
-    {{#each details as | detail |}}
+    {{#each details}}
     <li class="list__item item-list">
       <img
         src="{{root}}assets/img/invitation/details_{{image-modifier}}@2x.png"
@@ -17,7 +17,7 @@
         height="12"
         class="item-list__image"
       />
-      <p class="item-list__text">{{text}}</p>
+      <p class="item-list__text">{{{text}}}</p>
     </li>
     {{/each}}
   </ul>

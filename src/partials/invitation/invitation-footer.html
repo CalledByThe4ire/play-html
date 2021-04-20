@@ -5,7 +5,7 @@
       <spacer size="16"></spacer>
       <menu class="socials__menu menu-socials">
         {{#each socials as | social |}}
-        <item class="menu-socials__item" href="{{href}}"
+        <item class="menu-socials__item" href="{{href}}" target="_blank"
           ><img
             class="menu-socials__image"
             src="{{root}}assets/img/invitation/socials_{{title}}@2x.png"
@@ -22,7 +22,7 @@
       <spacer size="8"></spacer>
       <menu class="contacts__menu menu-contacts vertical">
         {{#each contacts as | contact |}}
-        <item class="menu-contacts__item" href="{{href}}">{{title}}</item>
+        <item class="menu-contacts__item" href="{{href}}" target="_blank">{{title}}</item>
         {{/each}}
       </menu>
     </div>
@@ -34,7 +34,7 @@
       <spacer size="16"></spacer>
       <menu class="links__menu menu-links vertical">
         {{#each links as | link |}}
-        <item class="menu-links__item" href="{{href}}">{{title}}</item>
+        <item class="menu-links__item" href="{{href}}" target="_blank">{{title}}</item>
         {{/each}}
       </menu>
     </div>

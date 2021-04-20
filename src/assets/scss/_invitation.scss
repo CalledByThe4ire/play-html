@@ -19,7 +19,8 @@
 
   .header {
     > tbody > tr > td {
-      padding: 0 $global-padding !important;
+      padding-left: $global-padding !important;
+      padding-right: $global-padding !important;
     }
 
     &__logo {
@@ -76,7 +77,10 @@
     }
 
     &__wrapper {
-      padding: $global-padding 30px 30px !important;
+      padding-top: $global-padding !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+      padding-bottom: 30px !important;
       background-color: $secondary-color !important;
       border: none !important;
       border-radius: $global-radius;
@@ -132,13 +136,17 @@
     }
 
     &__wrapper {
-      padding: 40px $global-padding 30px !important;
+      padding-top: 40px !important;
+      padding-left: $global-padding !important;
+      padding-right: $global-padding !important;
+      padding-bottom: 30px !important;
       background-color: $primary-color !important;
       border: none !important;
       transition: all 0.3s ease-in-out;
 
       @media only screen and (max-width: #{$global-breakpoint}) {
-        padding: 24px $global-padding 4px !important;
+        padding-top: 24px !important;
+        padding-bottom: 4px !important;
       }
     }
 
@@ -217,7 +225,8 @@
       margin: 0;
 
       > tbody > tr > td {
-        padding: 0 $global-padding !important;
+        padding-left: $global-padding !important;
+        padding-right: $global-padding !important;
       }
 
       table td {
@@ -248,7 +257,8 @@
       margin: 0;
 
       > tbody > tr > td {
-        padding: 0 $global-padding !important;
+        padding-left: $global-padding !important;
+        padding-right: $global-padding !important;
       }
 
       table td {
@@ -289,7 +299,8 @@
     }
 
     > tbody > tr > td {
-      padding: 0 $global-padding !important;
+      padding-left: $global-padding !important;
+      padding-right: $global-padding !important;
     }
 
     .socials {
