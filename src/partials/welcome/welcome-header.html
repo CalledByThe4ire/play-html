@@ -1,0 +1,25 @@
+<spacer size-sm="40" size-lg="56"></spacer>
+
+<center>
+  <a class="header__logo" href="#" target="_blank"
+    ><img
+      src="{{root}}assets/img/welcome/intro_logo@2x.png"
+      width="187"
+      height="32"
+      alt="PlayHTML logo"
+  /></a>
+</center>
+
+<spacer size-lg="48" size-sm="32"></spacer>
+
+<ul class="header__main-nav main-nav">
+  {{#each main-nav}}
+  <li class="main-nav__item main-nav__item--{{#inc}}{{@index}}{{/inc}}">
+    <a class="main-nav__link" href="{{href}}" target="_blank">{{{title}}}</a>
+  </li>
+  {{/each}}
+  <span class="main-nav--after"></span>
+</ul>
+
+<spacer size-lg="10" size-sm="18"></spacer>
+
