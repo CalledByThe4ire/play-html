@@ -1,4 +1,4 @@
-<callout  class="details__wrapper">
+<callout class="details__wrapper">
   <p class="details__intro">
     Мы&nbsp;расскажем все детали о&nbsp;том, с&nbsp;чего начать свой путь
     в&nbsp;разработке сайтов, и&nbsp;как вырасти в&nbsp;востребованного
@@ -7,18 +7,21 @@
   <spacer size-sm="24" size-lg="32"></spacer>
   <h2 class="details__heading">План вебинара:</h2>
   <spacer size="16"></spacer>
-  <ul class="details__list list">
+  <container class="details__list list">
     {{#each details}}
-    <li class="list__item item-list">
-      <img
-        src="{{root}}assets/img/invitation/details_{{image-modifier}}@2x.png"
-        alt="{{image-modifier}} symbol"
-        width="12"
-        height="12"
-        class="item-list__image"
-      />
-      <p class="item-list__text">{{{text}}}</p>
-    </li>
+    <row class="list__item item-list">
+      <columns class="item-list__image" small="0">
+        <img
+          src="{{root}}assets/img/invitation/details_{{image-modifier}}@2x.png"
+          alt="{{image-modifier}} symbol"
+          width="12"
+          height="12"
+        />
+      </columns>
+      <columns class="item-list__text" small="12">
+        <p>{{{text}}}</p>
+      </columns>
+    </row>
     {{/each}}
-  </ul>
+  </container>
 </callout>

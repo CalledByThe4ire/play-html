@@ -51,9 +51,13 @@ contacts:
       <spacer size="16"></spacer>
 
       <wrapper class="invitation__main-content main-content">
-        <container class="invitation__header header">{{> invitation-header}}</container>
-        <spacer size="10"></spacer>
-        <center class="invitation__details details">{{> invitation-details}}</center>
+        <container class="invitation__header header"
+          >{{> invitation-header}}</container
+        >
+        <spacer size="16"></spacer>
+        <center class="invitation__details details">
+          {{> invitation-details}}
+        </center>
         <spacer size="40"></spacer>
         <container class="invitation__presenter presenter"
           >{{> invitation-presenter}}</container
@@ -63,7 +67,9 @@ contacts:
           >{{> invitation-features}}</container
         >
         <spacer size="48"></spacer>
-        <container class="invitation__footer footer">{{> invitation-footer}}</container>
+        <container class="invitation__footer footer"
+          >{{> invitation-footer}}</container
+        >
       </wrapper>
 
       <spacer size-sm="48" size-lg="56"></spacer>
