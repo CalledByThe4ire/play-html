@@ -1,95 +1,16 @@
 ---
 layout: index-layout
 subject: Play HTML
-description: Хотите научиться web&#8209;разработке?
-details:
+description: Что вас ждет на&nbsp;курсе
+main-nav:
   [
-    { image-modifier: "circle", text: "Кто такой frontend&#8209;разработчик?" },
-    { image-modifier: "triangle", text: "Какие навыки сейчас востребованы?" },
-    {
-      image-modifier: "rectangle",
-      text: "Как устроиться в&nbsp;компанию после обучения?",
-    },
-  ]
-socials:
-  [
-    { title: "facebook", "href": "#" },
-    { title: "instagram", "href": "#" },
-    { title: "youtube", "href": "#" },
-    { title: "telegram", "href": "#" },
-    { title: "vkontakte", "href": "#" },
-  ]
-links:
-  [
-    { title: "Бесплатные вебинары", href: "#" },
-    { title: "Обучающие курсы", href: "#" },
-    { title: "Тесты", href: "#" },
-    { title: "Наш блог", href: "#" },
-    { title: "Истории студентов", href: "#" },
-  ]
-contacts:
-  [
-    { title: "study@htmlplay.com", href: "mailto:study@htmlplay.com" },
-    { title: "8-800-690-76-68", href: "tel:88006907668" },
+    { title: "курсы", href: "#" },
+    { title: "вебинары", href: "#" },
+    { title: "о&nbsp;школе", href: "#" },
+    { title: "распродажа", href: "#" },
   ]
 ---
 
-<spacer size="24"></spacer>
-
-<container class="invitation">
-  <row collapse>
-    <columns class="invitation__wrapper">
-      <p class="invitation__info info info--intro text-center">
-        Если вы&nbsp;не&nbsp;видите данное письмо, перейдите по&nbsp;<a
-          class="info__link"
-          href="#"
-          target="_blank"
-          >ссылке</a
-        >
-      </p>
-
-      <spacer size="16"></spacer>
-
-      <wrapper class="invitation__main-content main-content">
-        <container class="invitation__header header"
-          >{{> invitation-header}}</container
-        >
-        <spacer size="16"></spacer>
-        <center class="invitation__details details">
-          {{> invitation-details}}
-        </center>
-        <spacer size="40"></spacer>
-        <container class="invitation__presenter presenter"
-          >{{> invitation-presenter}}</container
-        >
-        <spacer size-sm="20" size-lg="16"></spacer>
-        <container class="invitation__features features"
-          >{{> invitation-features}}</container
-        >
-        <spacer size="48"></spacer>
-        <container class="invitation__footer footer"
-          >{{> invitation-footer}}</container
-        >
-      </wrapper>
-
-      <spacer size-sm="48" size-lg="56"></spacer>
-
-      <p class="info info--outro">
-        Вы&nbsp;получили это письмо, так как являетесь пользователем портала
-        HTMLPlay. Рассылка производится в&nbsp;соответствии
-        с&nbsp;пользовательским соглашением. Если вы&nbsp;не&nbsp;хотите
-        получать рассылку, вы&nbsp;можете
-        <a class="info__link" href="#" target="_blank">отписаться</a> или
-        <a class="info__link" href="#" target="_blank">настроить параметры</a>.
-      </p>
-
-      <p class="info info--outro">
-        Если письмо отображается некорректно или вы&nbsp;хотите
-        им&nbsp;поделиться,
-        <a class="info__link" href="#" target="_blank">жмите сюда</a>.
-      </p>
-    </columns>
-  </row>
-</container>
-
-<spacer size="16"></spacer>
+<wrapper class="welcome">
+  <container class="welcome__header header"> {{> welcome-header}} </container>
+</wrapper>

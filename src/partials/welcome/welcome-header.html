@@ -12,13 +12,18 @@
 
 <spacer size-lg="48" size-sm="32"></spacer>
 
-<ul class="header__main-nav main-nav">
-  {{#each main-nav}}
-  <li class="main-nav__item main-nav__item--{{#inc}}{{@index}}{{/inc}}">
-    <a class="main-nav__link" href="{{href}}" target="_blank">{{{title}}}</a>
-  </li>
-  {{/each}}
-  <span class="main-nav--after"></span>
-</ul>
+<container class="header__main-nav main-nav">
+  <ul class="main-nav__list">
+    {{#each main-nav}}
+    <li
+      class="main-nav__list-item main-nav__list-item--{{#inc}}{{@index}}{{/inc}}"
+    >
+      <a class="main-nav__link" href="{{href}}" target="_blank">{{{title}}}</a>
+    </li>&nbsp;
+    {{/each}}
+    <span class="main-nav__list--after"></span>
+  </ul>
+</container>
 
 <spacer size-lg="10" size-sm="18"></spacer>
+<container class="header__intro intro">{{> welcome-intro}}</container>

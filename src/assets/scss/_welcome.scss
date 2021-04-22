@@ -2,6 +2,7 @@
   background: $white;
 
   .header {
+    width: 100% !important;
     background: transparent !important;
 
     &__logo {
@@ -9,7 +10,7 @@
         display: inline-block;
 
         @media only screen and (max-width: #{$global-breakpoint}) {
-          width: 140px;
+          width: 140px !important;
           height: auto;
         }
       }
@@ -17,34 +18,31 @@
   }
 
   .main-nav {
-    margin: 0;
-    padding: 0;
-    padding-left: $global-padding * 2;
-    padding-right: $global-padding * 2;
-    list-style: none;
-    text-align: justify;
+    &__list {
+      margin: 0;
+      padding: 0;
+      padding-left: $global-padding * 2;
+      padding-right: $global-padding * 2;
+      list-style: none;
+      text-align: justify;
 
-    @media only screen and (max-width: #{$global-breakpoint}) {
-      padding-left: $global-padding;
-      padding-right: $global-padding;
-      min-width: 288px;
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        min-width: 288px;
+        padding-left: $global-padding;
+        padding-right: $global-padding;
+      }
+
+      &--after {
+        display: inline-block;
+        width: 100%;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+      }
     }
 
-    &--after {
-      display: inline-block;
-      width: 100%;
-      height: 0;
-      visibility: hidden;
-      overflow: hidden;
-    }
-
-    &__link {
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    &__item {
+    &__list-item {
+      position: relative;
       display: inline-block;
       padding-bottom: $global-padding;
 
@@ -76,6 +74,64 @@
           color: $fourth-color !important;
         }
       }
+    }
+
+    &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  .intro {
+    width: 100% !important;
+    background: $primary-color !important;
+
+    .row {
+      width: $global-width;
+      margin: auto;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        width: 100% !important;
+      }
+    }
+
+    &__content {
+      padding-left: $global-padding * 2 !important;
+      padding-bottom: 0 !important;
+    }
+
+    &__image {
+      padding-right: $global-padding * 2 !important;
+      padding-bottom: 0 !important;
+
+      img {
+        max-width: none !important;
+
+        @media only screen and (max-width: #{$global-breakpoint}) {
+          width: 175px;
+          height: 269px;
+        }
+      }
+    }
+  }
+
+  .content-intro {
+    &__heading {
+      margin-top: $global-margin * 2 !important;
+      margin-bottom: $global-margin * 1.5 !important;
+      color: $tertiary-color;
+      font-weight: 700;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        margin-top: $global-margin * 1.5 !important;
+      }
+    }
+
+    &__text {
+      margin-bottom: $global-margin * 1.5 !important;
+      padding-bottom: 0 !important;
+      color: $white;
     }
   }
 }
