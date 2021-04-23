@@ -134,4 +134,17 @@
       color: $white;
     }
   }
+
+  .about {
+    &__heading {
+      margin-bottom: 0;
+      font-weight: 700;
+      color: $secondary-color;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+  }
 }
