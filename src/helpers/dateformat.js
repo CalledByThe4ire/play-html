@@ -1,6 +1,6 @@
-const date = require('helper-date');
+const moment = require('moment');
+moment.locale('ru');
 
-// moment.locale('ru');
+const formatter = "DD YYYY[, ]HH:mm";
 
-// module.exports = (options) => moment().format();
-module.exports = (options) => date(options.fn(this));
+module.exports = (options) => moment(date.trim()).format(formatter);

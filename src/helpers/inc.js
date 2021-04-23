@@ -1,1 +1,1 @@
-module.exports = (options) => parseInt(options.fn(this)) + 1;
+module.exports = (options) => parseInt(options.fn()) + 1;
