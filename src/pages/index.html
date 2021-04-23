@@ -9,9 +9,33 @@ main-nav:
     { title: "о&nbsp;школе", href: "#" },
     { title: "распродажа", href: "#" },
   ]
+presenters:
+  [
+    {
+      name: "Антон",
+      surname: "Громов",
+      about: "Фронтенд&#8209;разработчик в&nbsp;Cats Development",
+      image-filename: "anton_gromov",
+    },
+    {
+      name: "Илья",
+      surname: "Раменский",
+      about: "Team&nbsp;Lead в&nbsp;Lizard Software",
+      image-filename: "ilya_ramensky",
+    },
+    {
+      name: "Игнатий",
+      surname: "Чубаров",
+      about: "Преподаватель&nbsp;IT в&nbsp;РУИТ",
+      image-filename: "ignatiy_chubarov",
+    },
+  ]
 ---
 
 <wrapper class="welcome">
   <container class="welcome__header header"> {{> welcome-header}} </container>
   <container class="welcome__about about"> {{> welcome-about}} </container>
+  <container class="welcome__presenters presenters">
+    {{> welcome-presenters}}
+  </container>
 </wrapper>

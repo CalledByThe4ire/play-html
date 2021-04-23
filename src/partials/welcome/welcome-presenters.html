@@ -1,0 +1,23 @@
+<h2 class="presenters__heading text-center">Ведущие курса</h2>
+<spacer size="24"></spacer>
+<row>
+  {{#each presenters}}
+  <columns class="presenters__item presenter" small="12" large="4">
+    <center>
+      <img
+        class="presenter__image"
+        src="{{root}}assets/img/welcome/{{image-filename}}@2x.png"
+        alt="{{name}} {{surname}}"
+        width="88"
+        height="88"
+      />
+    </center>
+    <spacer size="12"></spacer>
+    <h6 class="presenter__name-surname text-center">
+      {{{name}}} {{{surname}}}
+    </h6>
+    <p class="presenter__about text-center">{{{about}}}</p>
+    <spacer size-sm="16"></spacer>
+  </columns>
+  {{/each}}
+</row>

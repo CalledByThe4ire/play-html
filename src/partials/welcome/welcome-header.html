@@ -1,14 +1,16 @@
 <spacer size-sm="40" size-lg="56"></spacer>
 
-<center>
-  <a class="header__logo" href="#" target="_blank"
-    ><img
-      src="{{root}}assets/img/welcome/intro_logo@2x.png"
-      width="187"
-      height="32"
-      alt="PlayHTML logo"
-  /></a>
-</center>
+<!-- <center> -->
+  <h1 class="header__logo text-center">
+    <a href="#" target="_blank"
+      ><img
+        src="{{root}}assets/img/welcome/intro_logo@2x.png"
+        width="187"
+        height="32"
+        alt="PlayHTML logo"
+    /></a>
+  </h1>
+<!-- </center> -->
 
 <spacer size-lg="48" size-sm="32"></spacer>
 
@@ -19,8 +21,8 @@
       class="main-nav__list-item main-nav__list-item--{{#inc}}{{@index}}{{/inc}}"
     >
       <a class="main-nav__link" href="{{href}}" target="_blank">{{{title}}}</a>
-    </li>&nbsp;
-    {{/each}}
+    </li>
+    &nbsp; {{/each}}
     <span class="main-nav__list--after"></span>
   </ul>
 </container>
