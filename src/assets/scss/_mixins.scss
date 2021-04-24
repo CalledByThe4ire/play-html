@@ -1,3 +1,17 @@
 @mixin debug($color: $black) {
   outline: 1px dashed $color;
 }
+
+@mixin button {
+  margin: 0;
+
+  > tbody > tr > td {
+    padding-left: $global-padding !important;
+    padding-right: $global-padding !important;
+  }
+
+  table td {
+    text-align: center !important;
+    cursor: pointer !important;
+  }
+}

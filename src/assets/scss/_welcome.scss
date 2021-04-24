@@ -159,6 +159,12 @@
       font-weight: 700;
       color: $tertiary-color;
     }
+
+    > tbody > tr > td {
+      padding-left: $global-padding;
+      padding-right: $global-padding;
+    }
+
     .presenter {
       &__image {
         @media only screen and (max-width: #{$global-breakpoint}) {
@@ -172,6 +178,49 @@
       }
 
       &__about {
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .events {
+    &__intro {
+      margin-left: $global-margin;
+      margin-right: $global-margin;
+      margin-bottom: 0;
+      line-height: 1.2;
+    }
+
+    &__heading {
+      margin-bottom: 0;
+      font-weight: 700;
+      color: $primary-color;
+    }
+
+    .row {
+      border-collapse: separate !important;
+      margin-bottom: $global-margin !important;
+    }
+
+    > tbody > tr > td {
+      padding-left: $global-padding;
+      padding-right: $global-padding;
+    }
+
+    .event {
+      padding-top: $global-padding * 1.5;
+      padding-bottom: $global-padding * 1.5;
+      border: 1px solid $fifth-color;
+      border-radius: $global-radius * 3;
+
+      &__heading {
+        margin-bottom: $global-margin / 2;
+        font-weight: 700;
+        color: $fifth-color;
+      }
+
+      &__description {
         margin-bottom: 0;
         line-height: 1.2;
       }

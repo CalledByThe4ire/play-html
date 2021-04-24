@@ -1,0 +1,36 @@
+<spacer size="32"></spacer>
+<p class="events__intro">
+  Пока вы&nbsp;ждёте начала курса, вам могут быть интересны вебинары
+  на&nbsp;разные темы, которые проходят на&nbsp;платформе ежедневно.
+</p>
+<spacer size="48"></spacer>
+<h2 class="events__heading text-center">Другие мероприятия</h2>
+<spacer size-sm="16" size-lg="24"></spacer>
+{{#each events as |event|}}
+<row>
+  <columns class="events__item event" large="12">
+    <h4 class="event__heading">{{{title}}}</h4>
+    <span class="event__date"
+      ><strong>{{#dateformat}}{{event.date}}{{/dateformat}}</strong></span
+    >
+    <spacer size="16"></spacer>
+    <p class="event__description">{{{description}}}</p>
+  </columns>
+</row>
+{{/each}}
+<spacer size="16"></spacer>
+
+<center>
+  <button class="events__button btn radius secondary" href="#">
+    <span class="text-center">Все мероприятия</span>
+  </button>
+  <spacer size="16"></spacer>
+
+  <img
+    class="events__image"
+    src="{{root}}assets/img/welcome/events_bg@2x.png"
+    width="273"
+    height="290"
+    alt="Decorative image of the webinar participants who are happy"
+  />
+</center>

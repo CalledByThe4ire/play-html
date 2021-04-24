@@ -30,6 +30,24 @@ presenters:
       image-filename: "ignatiy_chubarov",
     },
   ]
+events:
+  [
+    {
+      title: "Тренды frontend-разработки",
+      date: "2021-06-20 17:00",
+      description: "Самые многообещающие направления развития фронтенда в&nbsp;2020 году",
+    },
+    {
+      title: "Figma vs&nbsp;Photoshop",
+      date: "2021-06-21 17:00",
+      description: "Почему давно пора отказаться от&nbsp;последнего?",
+    },
+    {
+      title: "Что такое Git и&nbsp;как его использовать?",
+      date: "2021-06-22 17:00",
+      description: "Разберем тонкости использования самой популярной системы контроля версий.",
+    },
+  ]
 ---
 
 <wrapper class="welcome">
@@ -38,4 +56,5 @@ presenters:
   <container class="welcome__presenters presenters">
     {{> welcome-presenters}}
   </container>
+  <container class="welcome__events events"> {{> welcome-events}} </container>
 </wrapper>

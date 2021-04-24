@@ -230,20 +230,6 @@
       margin-bottom: 0;
     }
 
-    &__button {
-      margin: 0;
-
-      > tbody > tr > td {
-        padding-left: $global-padding !important;
-        padding-right: $global-padding !important;
-      }
-
-      table td {
-        text-align: center;
-        cursor: pointer;
-      }
-    }
-
     > tbody > tr > td {
       padding-left: $global-padding !important;
       padding-right: $global-padding !important;
@@ -259,20 +245,6 @@
 
       @media only screen and (max-width: #{$global-breakpoint}) {
         font-size: 24px !important;
-      }
-    }
-
-    &__button {
-      margin: 0;
-
-      > tbody > tr > td {
-        padding-left: $global-padding !important;
-        padding-right: $global-padding !important;
-      }
-
-      table td {
-        text-align: center !important;
-        cursor: pointer !important;
       }
     }
 

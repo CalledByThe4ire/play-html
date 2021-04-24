@@ -1,6 +1,6 @@
 const moment = require('moment');
 moment.locale('ru');
 
-const formatter = "DD YYYY[, ]HH:mm";
+const formatter = 'DD MMMM[, ]HH:mm';
 
-module.exports = (options) => moment(date.trim()).format(formatter);
+module.exports = (options) => moment(options.fn()).format(formatter);
