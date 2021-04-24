@@ -39,14 +39,7 @@ contacts:
 <container class="invitation">
   <row collapse>
     <columns class="invitation__wrapper">
-      <p class="invitation__info info info--intro text-center">
-        Если вы&nbsp;не&nbsp;видите данное письмо, перейдите по&nbsp;<a
-          class="info__link"
-          href="#"
-          target="_blank"
-          >ссылке</a
-        >
-      </p>
+      {{> info-prev}}
 
       <spacer size="16"></spacer>
 
@@ -70,24 +63,12 @@ contacts:
         <container class="invitation__footer footer"
           >{{> invitation-footer}}</container
         >
+        <spacer size="24"></spacer>
       </wrapper>
 
       <spacer size-sm="48" size-lg="56"></spacer>
 
-      <p class="info info--outro">
-        Вы&nbsp;получили это письмо, так как являетесь пользователем портала
-        HTMLPlay. Рассылка производится в&nbsp;соответствии
-        с&nbsp;пользовательским соглашением. Если вы&nbsp;не&nbsp;хотите
-        получать рассылку, вы&nbsp;можете
-        <a class="info__link" href="#" target="_blank">отписаться</a> или
-        <a class="info__link" href="#" target="_blank">настроить параметры</a>.
-      </p>
-
-      <p class="info info--outro">
-        Если письмо отображается некорректно или вы&nbsp;хотите
-        им&nbsp;поделиться,
-        <a class="info__link" href="#" target="_blank">жмите сюда</a>.
-      </p>
+      {{> info-next}}
     </columns>
   </row>
 </container>

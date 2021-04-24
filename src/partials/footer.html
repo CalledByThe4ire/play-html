@@ -1,0 +1,46 @@
+<row class="footer__row">
+  <columns class="footer__columns" small="12" large="6">
+    <div class="footer__socials socials">
+      <h6 class="socials__heading">Мы&nbsp;в&nbsp;социальных сетях</h6>
+      <spacer size="16"></spacer>
+      <menu class="socials__menu menu-socials">
+        {{#each socials}}
+        <item class="menu-socials__item" href="{{href}}" target="_blank"
+          ><img
+            class="menu-socials__image"
+            src="{{root}}assets/img/socials_{{title}}@2x.png"
+            alt="{{title}} symbol"
+            width="24"
+            height="24"
+        /></item>
+        {{/each}}
+      </menu>
+    </div>
+    <spacer size="24"></spacer>
+    <div class="footer__contacts contacts">
+      <h6 class="contacts__heading">Свяжитесь с&nbsp;нами</h6>
+      <spacer size="8"></spacer>
+      <menu class="contacts__menu menu-contacts vertical">
+        {{#each contacts}}
+        <item class="menu-contacts__item" href="{{href}}" target="_blank"
+          >{{title}}</item
+        >
+        {{/each}}
+      </menu>
+    </div>
+    <spacer size-sm="8"></spacer>
+  </columns>
+  <columns class="footer__columns" small="12" large="6">
+    <div class="footer__links links">
+      <h6 class="links__heading">Полезные ссылки</h6>
+      <spacer size="16"></spacer>
+      <menu class="links__menu menu-links vertical">
+        {{#each links}}
+        <item class="menu-links__item" href="{{href}}" target="_blank"
+          >{{title}}</item
+        >
+        {{/each}}
+      </menu>
+    </div>
+  </columns>
+</row>

@@ -9,11 +9,74 @@ main-nav:
     { title: "о&nbsp;школе", href: "#" },
     { title: "распродажа", href: "#" },
   ]
+presenters:
+  [
+    {
+      name: "Антон",
+      surname: "Громов",
+      about: "Фронтенд&#8209;разработчик в&nbsp;Cats Development",
+      image-filename: "anton_gromov",
+    },
+    {
+      name: "Илья",
+      surname: "Раменский",
+      about: "Team&nbsp;Lead в&nbsp;Lizard Software",
+      image-filename: "ilya_ramensky",
+    },
+    {
+      name: "Игнатий",
+      surname: "Чубаров",
+      about: "Преподаватель&nbsp;IT в&nbsp;РУИТ",
+      image-filename: "ignatiy_chubarov",
+    },
+  ]
+events:
+  [
+    {
+      title: "Тренды frontend-разработки",
+      date: "2021-06-20 17:00",
+      description: "Самые многообещающие направления развития фронтенда в&nbsp;2020 году",
+    },
+    {
+      title: "Figma vs&nbsp;Photoshop",
+      date: "2021-06-21 17:00",
+      description: "Почему давно пора отказаться от&nbsp;последнего?",
+    },
+    {
+      title: "Что такое Git и&nbsp;как его использовать?",
+      date: "2021-06-22 17:00",
+      description: "Разберем тонкости использования самой популярной системы контроля версий.",
+    },
+  ]
+socials:
+  [
+    { title: "facebook", "href": "#" },
+    { title: "instagram", "href": "#" },
+    { title: "youtube", "href": "#" },
+    { title: "telegram", "href": "#" },
+    { title: "vkontakte", "href": "#" },
+  ]
+links:
+  [
+    { title: "Бесплатные вебинары", href: "#" },
+    { title: "Обучающие курсы", href: "#" },
+    { title: "Тесты", href: "#" },
+    { title: "Наш блог", href: "#" },
+    { title: "Истории студентов", href: "#" },
+  ]
+contacts:
+  [
+    { title: "study@htmlplay.com", href: "mailto:study@htmlplay.com" },
+    { title: "8-800-690-76-68", href: "tel:88006907668" },
+  ]
 ---
 
 <wrapper class="welcome">
   <container class="welcome__header header"> {{> welcome-header}} </container>
-  <spacer size-lg="48" size-sm="40"></spacer>
   <container class="welcome__about about"> {{> welcome-about}} </container>
+  <container class="welcome__presenters presenters">
+    {{> welcome-presenters}}
+  </container>
+  <container class="welcome__events events"> {{> welcome-events}} </container>
+  <container class="welcome__footer footer"> {{> welcome-footer}} </container>
 </wrapper>
-

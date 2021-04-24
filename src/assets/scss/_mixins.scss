@@ -15,3 +15,50 @@
     cursor: pointer !important;
   }
 }
+
+@mixin h-line(
+  $align: $hr-align,
+  $width: $hr-width,
+  $border: $hr-border,
+  $margin: nth($hr-margin, 1)
+) {
+  @at-root {
+    td.columns & table,
+    td.column & table,
+    th.columns & table,
+    th.column & table {
+      width: auto;
+    }
+  }
+
+  th {
+    padding-bottom: $margin;
+    @if $align == "left" {
+      text-align: left;
+    }
+    @elseif $align == 'right' {
+      text-align: right;
+    } @else {
+      text-align: center;
+    }
+  }
+
+  table {
+    display: inline-block;
+    margin: 0;
+    margin: 0;
+  }
+
+  th {
+    width: $width;
+    height: 0;
+    padding-top: $margin;
+    clear: both;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: $border;
+    border-left: 0;
+    font-size: 0;
+    line-height: 0;
+  }
+}

@@ -6,7 +6,7 @@
   font-size: 11px;
   line-height: 13px;
 
-  &--intro {
+  &--prev {
     color: #141414;
 
     #{$info}__link {
@@ -25,7 +25,7 @@
     }
   }
 
-  &--outro {
+  &--next {
     margin-bottom: $global-margin;
     color: $medium-gray;
     text-align: justify;

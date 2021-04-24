@@ -191,6 +191,12 @@
       color: $primary-color;
     }
 
+    &__image {
+      @media only screen and (max-width: #{$global-breakpoint}) {
+       width: 90% !important;
+      }
+    }
+
     .row {
       border-collapse: separate !important;
       margin-bottom: $global-margin !important;
