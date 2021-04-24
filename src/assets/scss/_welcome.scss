@@ -26,15 +26,11 @@
     &__list {
       margin: 0;
       padding: 0;
-      padding-left: $global-padding * 2;
-      padding-right: $global-padding * 2;
       list-style: none;
       text-align: justify;
 
       @media only screen and (max-width: #{$global-breakpoint}) {
-        min-width: 288px;
-        padding-left: $global-padding;
-        padding-right: $global-padding;
+        text-align: center !important;
       }
 
       &--after {
@@ -49,6 +45,8 @@
     &__list-item {
       position: relative;
       display: inline-block;
+      padding-left: $global-padding;
+      padding-right: $global-padding;
       padding-bottom: $global-padding;
 
       &--1 {
@@ -70,11 +68,6 @@
       }
 
       &--4 {
-        @media only screen and (max-width: #{$global-breakpoint}) {
-          width: 100%;
-          text-align: center;
-        }
-
         a {
           color: $fourth-color !important;
         }
@@ -168,7 +161,7 @@
     .presenter {
       &__image {
         @media only screen and (max-width: #{$global-breakpoint}) {
-          width: 88px;
+          width: 88px !important;
         }
       }
 
