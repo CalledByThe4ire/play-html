@@ -193,7 +193,7 @@
 
     &__image {
       @media only screen and (max-width: #{$global-breakpoint}) {
-       width: 90% !important;
+        max-width: 90% !important;
       }
     }
 
@@ -222,6 +222,38 @@
       &__description {
         margin-bottom: 0;
         line-height: 1.2;
+      }
+    }
+  }
+
+  .footer {
+    > tbody > tr > td {
+      padding-left: $global-padding;
+      padding-right: $global-padding;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    &__columns {
+      padding-left: 0;
+      padding-right: 0;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        padding-left: $global-padding !important;
+        padding-right: $global-padding !important;
+      }
+    }
+
+    .info {
+      margin-left: 0;
+      margin-right: 0;
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        margin-left: $global-margin !important;
+        margin-right: $global-margin !important;
       }
     }
   }
