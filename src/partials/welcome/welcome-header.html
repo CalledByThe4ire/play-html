@@ -20,7 +20,7 @@
     >
       <a class="main-nav__link" href="{{href}}" target="_blank">{{{title}}}</a>
     </li>
-    &nbsp; {{/each}}
+    {{#unless @last}}&nbsp;{{/unless}} {{/each}}
     <span class="main-nav__list--after"></span>
   </ul>
 </container>

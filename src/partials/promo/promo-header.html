@@ -1,0 +1,33 @@
+<spacer size-sm="24" size-lg="52"></spacer>
+<h1 class="header__logo">
+  <a href="#" target="_blank"
+    ><img
+      src="{{root}}assets/img/logo@2x.png"
+      width="140"
+      height="24"
+      alt="PlayHTML logo"
+  /></a>
+</h1>
+<span class="show-for-large">&nbsp;</span>
+
+<div class="header__socials socials">
+  <div class="socials__row">
+    <span class="socials__text">Мы в соцсетях:</span>
+    <menu class="socials__menu menu-socials">
+      {{#each socials}}
+      <item class="menu-socials__item" href="{{href}}" target="_blank"
+        ><img
+          class="menu-socials__image"
+          src="{{root}}assets/img/socials_{{title}}@2x.png"
+          alt="{{title}} symbol"
+          width="24"
+          height="24"
+      /></item>
+      {{/each}}
+    </menu>
+  </div>
+</div>
+<span class="show-for-large">&nbsp;</span>
+
+<span class="header--after"></span>
+<spacer size-sm="24" size-lg="36"></spacer>
