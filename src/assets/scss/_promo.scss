@@ -100,14 +100,97 @@
     }
   }
 
+  .special-offer {
+    .intro-special-offer {
+      border-radius: $global-radius * 3;
+
+      &__wrapper {
+        background: $secondary-color;
+        border-top-left-radius: $global-radius * 3;
+
+        @media only screen and (max-width: #{$global-breakpoint}) {
+          border-top-right-radius: $global-radius * 3;
+        }
+
+        .wrapper-inner {
+          padding-top: 40px;
+          padding-left: $global-padding * 2;
+          padding-right: $global-padding * 2;
+          padding-bottom: $global-padding * 2;
+        }
+      }
+
+      &__columns {
+        padding-bottom: 0;
+
+        &--last {
+          center {
+            min-width: auto;
+          }
+        }
+      }
+
+      &__image {
+        width: 284px;
+        height: auto;
+      }
+
+      &__heading {
+        display: block;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1;
+        color: $white;
+        text-transform: uppercase;
+      }
+
+      &__accent {
+        display: block;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+        color: $white;
+      }
+
+      &__inner {
+        display: inline-block;
+        text-align: justify;
+
+        &--after {
+          display: inline-block;
+          width: 100%;
+          height: 0;
+          visibility: hidden;
+          overflow: hidden;
+        }
+      }
+
+      &__discount-amount {
+        display: table-cell;
+        font-family: Tahoma, Arial, sans-serif;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1;
+        color: $white;
+      }
+
+      &__note {
+        display: table-cell;
+        vertical-align: bottom;
+        padding-left: $global-padding / 2;
+        padding-bottom: $global-padding / 6;
+        font-size: 18px;
+        line-height: 1.2;
+        text-align: left;
+        color: $white;
+      }
+    }
+  }
+
   .footer {
     background: $white;
     border-top-left-radius: $global-radius * 3;
     border-top-right-radius: $global-radius * 3;
-
-    @media only screen and (max-width: #{$global-breakpoint}) {
-      width: 288px !important;
-    }
 
     &__columns {
       &.columns {
