@@ -2,38 +2,46 @@
   <h4 class="courses-special-offer__heading text-center">
     Курсы, учавствующие в&nbsp;акции
   </h4>
+  <spacer size="24"></spacer>
   {{#each courses as | course |}} {{#if (is-even @index)}}<row
-    class="courses-special-offer__row"
     >{{/if}}
-    <columns class="courses-special-offer__columns" small="12" large="6">
-      <!-- <center> -->
-      <img
-        class="courses-special-offer__image"
-        src="{{root}}assets/img/promo/courses-special-offer_{{image-filename}}_logo@2x.png"
-        width="165"
-        height="105"
-        alt="Логотип {{image-filename}}"
-      />
-      <!-- </center> -->
-      <h6 class="courses-special-offer__heading text-center">{{{title}}}</h6>
-      <div class="courses-special-offer__inner">
-        <span
-          class="courses-special-offer__price courses-special-offer__price--original"
-          >{{#format-number}}{{course.price}}{{/format-number}}&nbsp;руб.</span
-        >
-        <span
-          class="courses-special-offer__price courses-special-offer__price--discount"
-          >{{#format-number}}{{#apply-discount}}{{course.price}}{{/apply-discount}}{{/format-number}}&nbsp;руб.</span
-        >
-        <span class="courses-special-offer__inner--after"></span>
-      </div>
+    <columns small="12" large="6">
+      <center>
+        <img
+          class="courses-special-offer__image"
+          src="{{root}}assets/img/promo/courses-special-offer_{{image-filename}}_logo@2x.png"
+          width="165"
+          height="105"
+          alt="Логотип {{image-filename}}"
+        />
+        <spacer size="16"></spacer>
+        <h6 class="courses-special-offer__heading text-center">{{{title}}}</h6>
+        <spacer size="16"></spacer>
+        <div class="courses-special-offer__inner">
+          <span
+            class="courses-special-offer__price courses-special-offer__price--original"
+            >{{#format-number}}{{course.price}}{{/format-number}}&nbsp;руб.</span
+          >
+          <span
+            class="courses-special-offer__price courses-special-offer__price--discount"
+            ><span
+              class="courses-special-offer__price courses-special-offer__price--accent"
+              >{{#format-number}}{{#apply-discount}}{{course.price}}{{/apply-discount}}{{/format-number}}</span
+            >&nbsp;руб.</span
+          >
+          <span class="courses-special-offer__inner--after"></span>
+        </div>
+        <spacer size="16"></spacer>
 
-      <!-- <center> -->
-      <button class="courses-special-offer__button btn radius primary" href="#">
-        <span class="text-center">Записаться на&nbsp;курс</span>
-      </button>
-      <!-- </center> -->
+        <button
+          class="courses-special-offer__button btn btn--primary radius"
+          href="#"
+        >
+          <span class="text-center">Записаться на&nbsp;курс</span>
+        </button>
+      </center>
     </columns>
     {{/each}}
   </row>
+  <spacer size-lg="8"></spacer>
 </container>

@@ -1,5 +1,17 @@
 .btn {
   @include button();
+
+  &--primary {
+    table td {
+      background: $primary-color !important;
+    }
+  }
+
+  &--secondary {
+    table td {
+      background: $secondary-color !important;
+    }
+  }
 }
 
 .h-line {

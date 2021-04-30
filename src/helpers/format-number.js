@@ -1,1 +1,5 @@
-module.exports = (options) => Number(options.fn()).toLocaleString('ru-RU');
+module.exports = (options) =>
+  options
+    .fn()
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, '&nbsp;');
