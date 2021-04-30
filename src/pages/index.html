@@ -28,6 +28,23 @@ popular-courses:
       image-filename: "game-developer",
     },
   ]
+advantages: [
+{
+  title: 'Более 30&nbsp;курсов',
+  description: 'Как для новичков, так и&nbsp;для практикующих разработчиков.',
+  image-filename: 'course',
+},
+{
+  title: 'Только актуальные знания',
+  description: 'Все преподаватели являются практикующими разработчиками, следят за&nbsp;трендами и&nbsp;постоянно обновляют программу курса.',
+  image-filename: 'knowledge',
+},
+{
+  title: 'База лучших вакансий',
+  description: 'Выпускники получают доступ к&nbsp;базе вакансий от&nbsp;ведущих работодателей.',
+  image-filename: 'vacancy',
+}
+]
 ---
 
 <container class="promo">
@@ -45,8 +62,10 @@ popular-courses:
       <spacer size="24"></spacer>
 
       <wrapper class="promo__education education">
-        {{> promo-popular-courses}} {{> promo-advantages}}
+        {{> promo-education}}
       </wrapper>
+      <spacer size="24"></spacer>
+
       <wrapper class="promo__footer footer">{{> promo-footer}}</wrapper>
     </columns>
   </row>

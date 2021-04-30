@@ -413,6 +413,37 @@
         margin-bottom: 0;
       }
     }
+
+    .advantages {
+      .container {
+        background: transparent;
+      }
+
+      &__heading {
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+
+      .item-list {
+        img {
+          @media only screen and (max-width: #{$global-breakpoint}) {
+            max-width: none !important;
+            width: 40px !important;
+          }
+        }
+
+        .columns.first {
+          @media only screen and (max-width: #{$global-breakpoint}) {
+            padding-right: $global-padding !important;
+          }
+
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   .footer {

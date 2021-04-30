@@ -1,0 +1,27 @@
+<div class="education__advantages advantages">
+  <spacer size="16"></spacer>
+  <h4 class="advantages__heading text-center">
+    Преимущества обучения у&nbsp;нас
+  </h4>
+  <spacer size-sm="46" size-lg="30"></spacer>
+
+  <container class="advantages__list list">
+    {{#each advantages}}
+    <row class="list__item item-list">
+      <columns small="0" large="1">
+        <img
+          class="item-list__image"
+          src="{{root}}assets/img/promo/advantages_{{image-filename}}_concept@2x.png"
+          alt="{{image-filename}} symbol"
+          width="40"
+          height="40"
+        />
+      </columns>
+      <columns class="item-list__text" small="12" large="11">
+        <span><strong>{{{title}}}</strong></span>
+        <p>{{{description}}}</p>
+      </columns>
+    </row>
+    {{/each}}
+  </container>
+</div>
