@@ -1,0 +1,17 @@
+.intro {
+  background: transparent !important;
+
+  .menu-item {
+    padding-bottom: $global-padding / 2;
+
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      width: 100% !important;
+    }
+  }
+
+  img {
+    @media only screen and (max-width: #{$global-breakpoint}) {
+      width: 140px !important;
+    }
+  }
+}
