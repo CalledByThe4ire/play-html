@@ -309,6 +309,112 @@
     }
   }
 
+  .education {
+    background: $white;
+    border-radius: $global-radius * 3;
+
+    .wrapper-inner {
+      padding: $global-padding !important;
+    }
+
+    .popular-courses {
+      center {
+        min-width: auto;
+      }
+
+      .container {
+        background: transparent;
+
+        > tbody > tr > td {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+
+        .columns {
+          vertical-align: top;
+
+          @media only screen and (max-width: #{$global-breakpoint}) {
+            padding-bottom: 40px;
+          }
+
+          &.first {
+            padding-right: 12px;
+
+            @media only screen and (max-width: #{$global-breakpoint}) {
+              padding-right: 0;
+            }
+          }
+
+          &.last {
+            padding-left: 12px;
+
+            @media only screen and (max-width: #{$global-breakpoint}) {
+              padding-left: 0;
+            }
+          }
+        }
+
+        td.large-4,
+        th.large-4 {
+          padding-left: 12px;
+          padding-right: 12px;
+
+          @media only screen and (max-width: #{$global-breakpoint}) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+        }
+
+        center {
+          min-width: auto;
+        }
+      }
+
+      &__heading {
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+
+      &__image {
+        @media only screen and (max-width: #{$global-breakpoint}) {
+          max-width: none !important;
+          width: 288px !important;
+          margin-left: -$global-margin !important;
+          margin-right: -$global-margin !important;
+        }
+      }
+    }
+
+    .course {
+      &__inner {
+        min-height: 120px;
+      }
+      &__image {
+        width: 48px;
+
+        @media only screen and (max-width: #{$global-breakpoint}) {
+          width: 48px !important;
+          height: auto;
+        }
+      }
+
+      &__title {
+        margin-bottom: 0;
+        font-size: 13px;
+        line-height: 1.16;
+        font-weight: 700;
+
+        @media only screen and (max-width: #{$global-breakpoint}) {
+          max-width: 150px;
+        }
+      }
+
+      &__button {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .footer {
     background: $white;
     border-top-left-radius: $global-radius * 3;

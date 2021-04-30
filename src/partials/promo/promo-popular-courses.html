@@ -1,0 +1,46 @@
+<div class="education__popular-courses popular-courses">
+  <spacer size="16"></spacer>
+  <h4 class="popular-courses__heading text-center">Популярные курсы</h4>
+  <spacer size-sm="24" size-lg="48"></spacer>
+
+  <container>
+    <row>
+      {{#each popular-courses}}
+      <columns class="popular-courses__course course" small="12" large="4">
+        <center>
+          <div class="course__inner">
+            <img
+              class="course__image"
+              src="{{root}}assets/img/promo/popular-courses_{{image-filename}}_concept@2x.png"
+              alt="Иллюстрация к курсу"
+              width="48"
+              height="56"
+            />
+            <spacer size="16"></spacer>
+            <h6 class="course__title text-center">{{{title}}}</h6>
+          </div>
+          <spacer size="16"></spacer>
+
+          <button class="course__button btn btn--secondary radius" href="#">
+            <span class="text-center">Записаться</span>
+          </button>
+        </center>
+      </columns>
+      {{/each}}
+    </row>
+  </container>
+  <spacer size-sm="24"></spacer>
+
+  <center>
+    <img
+      class="popular-courses__image"
+      src="{{root}}assets/img/promo/popular-courses_bg@2x.png"
+      alt="Изображение студента PlayHTML"
+      width="300"
+      height="300"
+    />
+    <button class="popular-courses__button btn btn--primary radius" href="#">
+      <span class="text-center">Все курсы</span>
+    </button>
+  </center>
+</div>
