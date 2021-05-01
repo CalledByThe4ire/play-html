@@ -272,6 +272,14 @@
       &.last {
         padding-right: $global-padding !important;
       }
+
+      @media only screen and (max-width: #{$global-breakpoint}) {
+        &.first,
+        &.last {
+          padding-left: $global-padding / 2 !important;
+          padding-right: $global-padding / 2 !important;
+        }
+      }
     }
   }
 
